@@ -1,5 +1,6 @@
 #!/usr/bin/env python
-# Start web server in current directory (may be usefull for previewing site)
+# Start web server in current directory
+# (may be useful for previewing static web site)
 
 from BaseHTTPServer import *
 from SimpleHTTPServer import *
