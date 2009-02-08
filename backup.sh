@@ -2,8 +2,8 @@
 # Simple backups based on article
 # http://blog.interlinked.org/tutorials/rsync_time_machine.html
 
-FILES=$HOME                     # What to backup
-BACKUPS=/media/sklad/backups    # Where to store backups
+FILES=$HOME                             # What to backup
+BACKUPS=/media/sklad/backups-`uname -n` # Where to store backups
 # File .rsync-filter can be used to exclude/include some files
 # Use `man 1 rsync` for more information
 
