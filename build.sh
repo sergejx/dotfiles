@@ -55,6 +55,9 @@ else
     "py")
         run pychecker $FILENAME
         ;;
+    "markdown")
+        run markdown $FILENAME -f ${FILENAME%.markdown}.html
+        ;;
     "texy")
         echo "texy $FILENAME > ${FILENAME%.texy}.html"
         ~/bin/texy $FILENAME > ${FILENAME%.texy}.html
