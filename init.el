@@ -31,6 +31,18 @@
   "Major mode for editing Markdown files" t)
 (add-to-list 'auto-mode-alist '("\\.markdown$" . markdown-mode))
 
+(defun markdown-to-slideshow ()
+  "Convert Markdown to S5 slideshow"
+  (interactive)
+  (let ((name-root (file-name-sans-extension (buffer-file-name))))
+    (shell-command
+     (concat "pandoc -w s5 -s -o " name-root ".html " (buffer-file-name)))))
+
+
+(add-hook 'markdown-mode-hook
+          (lambda ()
+            (define-key markdown-mode-map "\C-c\C-cs" 'markdown-to-slideshow)))
+
 ;; JavaScript
 (autoload 'js2-mode "js2" nil t)
 (add-to-list 'auto-mode-alist '("\\.js$" . js2-mode))
