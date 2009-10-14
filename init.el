@@ -16,10 +16,12 @@
 
 ;; Behaviour 
 (setq make-backup-files nil)
+(windmove-default-keybindings 'meta) ; Move between windows with M-arrows
 
 ;; Indentation
 (global-set-key (kbd "RET") 'newline-and-indent)
 (setq-default indent-tabs-mode nil)
+(setq-default c-basic-offset 4)
 
 ;; Modes
 (ido-mode)
