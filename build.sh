@@ -53,7 +53,7 @@ else
         run g++ -Wall -o ${FILENAME%.cpp} $FILENAME
         ;;
     "py")
-        run pychecker $FILENAME
+        run pyflakes $FILENAME
         ;;
     "markdown")
         run markdown $FILENAME -f ${FILENAME%.markdown}.html
