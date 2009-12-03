@@ -1,5 +1,7 @@
 set nocompatible
 
+filetype indent on
+
 " Tabs & indentation
 set expandtab
 set smarttab
@@ -43,6 +45,7 @@ autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 autocmd FileType php setlocal omnifunc=phpcomplete#CompletePHP
 autocmd FileType c setlocal omnifunc=ccomplete#Complete
 
+let g:tex_flavor='latex'
 au FileType tex setlocal textwidth=78
 au FileType tex setlocal shiftwidth=2
 au FileType tex setlocal spell
