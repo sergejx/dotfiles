@@ -46,6 +46,8 @@ autocmd FileType php setlocal omnifunc=phpcomplete#CompletePHP
 autocmd FileType c setlocal omnifunc=ccomplete#Complete
 
 let g:tex_flavor='latex'
+let g:Tex_DefaultTargetFormat='pdf'
+let g:Tex_GotoError=0
 au FileType tex setlocal textwidth=78
 au FileType tex setlocal shiftwidth=2
 au FileType tex setlocal spell
