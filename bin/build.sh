@@ -7,28 +7,6 @@ function run() {
     $@
 }
 
-function build_tex() {
-    LATEX_ARGS=-halt-on-error
-    FILENAME=$1
-
-    MASTER=`grep -oP '(?<=%% master:) [-_\.\w]*' $FILENAME`
-    if [ -n "$MASTER" ]
-        then FILENAME=$MASTER
-    fi
-
-    PREFIX=`grep -oP '(?<=%% prefix:) [-_\.\w]*' $FILENAME`
-    if grep -Fq $'\pdfoutput=1' $FILENAME
-        then PREFIX='pdf'
-    fi
-
-    if grep -Fq $'\starttext' $FILENAME
-        then texexec $FILENAME
-    elif grep -Fq $'\usepackage{slovak}\n\usepackage{czech}' $FILENAME
-        then run ${PREFIX}cslatex $LATEX_ARGS $FILENAME
-        else run ${PREFIX}latex $LATEX_ARGS $FILENAME
-    fi
-}
-
 FILENAME=$1
 if [ -f Makefile -o -f makefile ]
     then run make
@@ -38,7 +16,7 @@ else
     EXT=${FILENAME##*.}
     case "$EXT" in
     "tex")
-        build_tex $FILENAME
+        run rubber --pdf $FILENAME
         ;;
     "java")
         run javac $FILENAME
@@ -58,12 +36,14 @@ else
     "markdown")
         run markdown $FILENAME -f ${FILENAME%.markdown}.html
         ;;
-    "texy")
-        echo "texy $FILENAME > ${FILENAME%.texy}.html"
-        ~/bin/texy $FILENAME > ${FILENAME%.texy}.html
-        ;;
-    "txt")
-        run asciidoc $FILENAME
+    "texdown")
+        if [ -f inheader.tex ]; then
+            run markdown2pdf --include-in-header=inheader.tex $FILENAME
+        elif [ -f template.tex ]; then
+            run markdown2pdf --template=template.tex $FILENAME
+        else
+            run markdown2pdf $FILENAME
+        fi
         ;;
     *)
         echo "I don't know how to build your file"
