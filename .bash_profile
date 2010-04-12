@@ -8,11 +8,9 @@ fi
 # User specific environment and startup programs
 
 if [ -d ~/bin ]; then
-    PATH=$HOME/bin:$PATH
+    PATH=$HOME/bin:$HOME/.cabal/bin:$HOME/.gem/ruby/1.8/bin:$PATH
     export PATH
 fi
-
-export LC_ALL="sk_SK.utf8"
 
 export EDITOR=vim
 export BROWSER=firefox
