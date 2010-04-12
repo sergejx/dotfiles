@@ -66,7 +66,7 @@ highlight Visual gui=none guifg=#555753 guibg=#eeeeec
  
 " Syntax group
 highlight Comment gui=none guifg=#888a85 guibg=bg
-highlight Constant gui=bold guifg=#cc0000 guibg=bg
+highlight Constant gui=none guifg=#cc0000 guibg=bg
 highlight Error gui=none guifg=#a40000 guibg=#cc0000
 highlight SpellBad term=underline gui=undercurl guisp=#ef2929
 highlight Identifier gui=none guifg=#3465a4 guibg=bg
