@@ -14,7 +14,7 @@ map <Down> gj
 
 set wildmenu
 set wildignore+=*.pyc,*.pyo,*.hi,*.o " Programming
-set wildignore+=*.aux,*.dvi,*.pdf,*.log,*.bbl,*.blg " LaTeX
+set wildignore+=*.aux,*.dvi,*.pdf,*.log,*.out,*.bbl,*.blg " LaTeX
 
 " Display white spaces with F12
 set lcs=trail:·,tab:»-,nbsp:°
