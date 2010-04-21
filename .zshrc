@@ -35,12 +35,6 @@ setopt autocd
 alias ge="outofterm gedit"
 alias nau="outofterm nautilus ."
 
-function mplayer() {
-    gnome-screensaver-command --inhibit &
-    /usr/bin/mplayer $@
-    kill $!
-}
-
 ### Helper functions ###
 function outofterm () {
     command=$1
