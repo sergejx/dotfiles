@@ -8,4 +8,5 @@ set lines=48 "make default window a little bit higher
 set cursorline
 let g:molokai_original=1
 let g:bg_tango = 1
-colorscheme railscasts
+let g:mayansmoke_cursor_line_visibility = 1
+colorscheme mayansmoke
