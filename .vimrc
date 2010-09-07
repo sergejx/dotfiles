@@ -56,8 +56,8 @@ set makeprg=~/bin/build.sh\ %
 set visualbell
 set pastetoggle=<F3>
 " Paste from X clipboard
-imap <S-Ins> <Esc>"*pi
-map <S-Ins> "*pi
+imap <S-Ins> <Esc>"+pa
+map <S-Ins> "+p
 
 " Spell settings
 set spelllang=sk
