@@ -8,6 +8,9 @@ set smarttab
 set shiftwidth=4
 set autoindent
 
+let mapleader = ","
+let maplocalleader = ","
+
 set linebreak
 map <Up> gk
 map <Down> gj
