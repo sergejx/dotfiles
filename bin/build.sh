@@ -7,6 +7,15 @@ function run() {
     $@
 }
 
+function find_tex_master() {
+    FILENAME=$1
+    MASTER=`grep -oP '(?<=%% master:) [-_\.\w]*' $FILENAME`
+    if [ -z "$MASTER" ]
+        then MASTER=$FILENAME
+    fi
+    echo $MASTER
+}
+
 FILENAME=$1
 if [ -f Makefile -o -f makefile ]
     then run make
@@ -16,6 +25,7 @@ else
     EXT=${FILENAME##*.}
     case "$EXT" in
     "tex")
+        FILENAME=`find_tex_master $FILENAME`
         run rubber --pdf $FILENAME
         ;;
     "java")
