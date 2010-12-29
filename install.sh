@@ -12,6 +12,7 @@ function link_file() {
             echo "File $1 already exists."
         fi
     else
+        echo "Linking $1"
         ln -s $target $name
     fi
 }
