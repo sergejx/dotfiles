@@ -1,0 +1,4 @@
+XDvi.background: White
+Emacs.fontBackend: xft
+Emacs.font: Monospace-10
+Emacs*toolBar: 0
