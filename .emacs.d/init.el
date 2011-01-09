@@ -9,12 +9,15 @@
 ;; Look & Feel
 (setq inhibit-startup-message t)
 (setq inhibit-startup-echo-area-message t)
+(tool-bar-mode -1) ; no toolbar
 (setq-default indicate-empty-lines t)
+; Scrolling
 (set-scroll-bar-mode 'right)
 (setq scroll-step 1)
 (setq mouse-wheel-scroll-amount '(1 ((shift) . 1) ((control))))
 
-;; Behaviour 
+;; Behaviour
+(setq require-final-newline t) ; Put newline after last line
 (setq make-backup-files nil)
 (windmove-default-keybindings 'meta) ; Move between windows with M-arrows
 
@@ -50,3 +53,13 @@
 ;; Org
 (require 'org-install)
 (add-to-list 'auto-mode-alist '("\\.org$" . org-mode))
+
+;; TeX
+(add-hook 'latex-mode-hook 'turn-on-reftex)
+(add-hook 'latex-mode-hook 'visual-line-mode)
+(setq latex-run-command "pdflatex")
+(add-hook 'latex-mode-hook '(lambda()
+                              (defun tex-view ()
+                                (interactive)
+                                (tex-send-command "xdg-open"
+                                  (tex-append tex-print-file ".pdf")))))
