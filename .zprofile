@@ -6,7 +6,7 @@ if [ -d ~/.cabal/bin ]; then
     export PATH=$HOME/.cabal/bin:$PATH
 fi
 
-export EDITOR=vim
+export EDITOR=vi
 export BROWSER=firefox
 export LESSCHARSET="utf-8"
 export DARCS_DONT_ESCAPE_8BIT=1
