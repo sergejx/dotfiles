@@ -15,9 +15,10 @@
 (set-scroll-bar-mode 'right)
 (setq scroll-step 1)
 (setq mouse-wheel-scroll-amount '(1 ((shift) . 1) ((control))))
+(global-visual-line-mode 1) ; Word wrap
+
 
 ;; Behaviour
-(setq require-final-newline t) ; Put newline after last line
 (setq make-backup-files nil)
 (windmove-default-keybindings 'meta) ; Move between windows with M-arrows
 
@@ -26,8 +27,12 @@
 (setq-default indent-tabs-mode nil)
 (setq-default c-basic-offset 4)
 
+;; Global settings
+(setq require-final-newline t) ; Put newline after last line
+(add-hook 'before-save-hook 'delete-trailing-whitespace)
+
 ;; Modes
-(ido-mode)
+(ido-mode t)
 
 ;; Markdown
 (autoload 'markdown-mode "markdown-mode.el"
