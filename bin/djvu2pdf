@@ -2,4 +2,4 @@
 NAME=`basename "$1" .djvu`
 shift
 ddjvu -format=tiff $* "$NAME.djvu" "$NAME.tiff"
-tiff2pdf -j -o "$NAME.pdf" "$NAME.tiff"
+tiff2pdf -z -o "$NAME.pdf" "$NAME.tiff"
