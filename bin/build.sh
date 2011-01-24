@@ -9,7 +9,7 @@ function run() {
 
 function find_tex_master() {
     FILENAME=$1
-    MASTER=`grep -oP '(?<=%% master:) [-_\.\w]*' $FILENAME`
+    MASTER=`grep -oP '(?<=% mainfile:) [-_\.\w]*' $FILENAME`
     if [ -z "$MASTER" ]
         then MASTER=$FILENAME
     fi
