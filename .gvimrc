@@ -1,5 +1,6 @@
 "Gui
 set guifont=Dejavu\ Sans\ Mono\ 10
+set guioptions-=m "disable menu
 set guioptions-=T "disable toolbar
 set number
 set columns=84 "to make space for line numbers
