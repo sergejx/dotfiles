@@ -34,11 +34,6 @@ autocmd FileType html,xhtml,xml,php source ~/.vim/scripts/closetag.vim
 autocmd FileType make setlocal noexpandtab nosmarttab
 let python_highlight_all = 1
 
-" markdown filetype file
-augroup markdown
-    au! BufRead,BufNewFile *.markdown   setfiletype mkd
-augroup END
-
 " Omni completion
 autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
