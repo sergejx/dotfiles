@@ -61,4 +61,21 @@ map <S-Ins> "+p
 set spelllang=sk
 set spellsuggest=fast,14
 
+" Keymaps switching
+function! SwitchKeymap ()
+    if &keymap =~ 'russian'
+        set keymap=slovak-querty
+    else
+        set keymap=russian-yazherty
+    endif
+endfunction
+" Alt-^
+imap <M-6> <Esc>:call SwitchKeymap ()<CR>a
+
+" By default use Slovak mapping
+set keymap=slovak-querty
+" but make it inactive
+set iminsert=0
+set imsearch=0
+
 map <F8> :make<cr>
