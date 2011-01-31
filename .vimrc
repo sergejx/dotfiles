@@ -1,12 +1,14 @@
 set nocompatible
 
-filetype indent on
-
 " Tabs & indentation
 set expandtab
 set smarttab
 set shiftwidth=4
 set autoindent
+
+" UI
+set laststatus=2
+set visualbell
 
 let mapleader = ","
 let maplocalleader = ","
@@ -23,7 +25,15 @@ set wildignore+=*.aux,*.dvi,*.pdf,*.log,*.out,*.bbl,*.blg " LaTeX
 set lcs=trail:·,tab:»-,nbsp:°
 map <F12> :set list!<CR>
 
-" Filetypes
+set makeprg=~/bin/build.sh\ %
+map <F8> :make<cr>
+
+set pastetoggle=<F3>
+" Paste from X clipboard
+imap <S-Ins> <Esc>"+pa
+map <S-Ins> "+p
+
+" Filetypes ==================================================================
 syntax on
 filetype plugin on
 let filetype_asm = "nasm"
@@ -34,6 +44,10 @@ autocmd FileType html,xhtml,xml,php source ~/.vim/scripts/closetag.vim
 autocmd FileType make setlocal noexpandtab nosmarttab
 let python_highlight_all = 1
 
+au FileType tex setlocal textwidth=78
+au FileType tex setlocal shiftwidth=2
+au FileType tex setlocal spell
+
 " Omni completion
 autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
@@ -43,19 +57,7 @@ autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 autocmd FileType php setlocal omnifunc=phpcomplete#CompletePHP
 autocmd FileType c setlocal omnifunc=ccomplete#Complete
 
-let g:tex_flavor='latex'
-let g:Tex_DefaultTargetFormat='pdf'
-let g:Tex_GotoError=0
-au FileType tex setlocal textwidth=78
-au FileType tex setlocal shiftwidth=2
-au FileType tex setlocal spell
-
-set makeprg=~/bin/build.sh\ %
-set visualbell
-set pastetoggle=<F3>
-" Paste from X clipboard
-imap <S-Ins> <Esc>"+pa
-map <S-Ins> "+p
+" Language settings ==========================================================
 
 " Spell settings
 set spelllang=sk
@@ -77,5 +79,3 @@ set keymap=slovak-querty
 " but make it inactive
 set iminsert=0
 set imsearch=0
-
-map <F8> :make<cr>
