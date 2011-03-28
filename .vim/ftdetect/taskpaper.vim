@@ -7,4 +7,5 @@
 "
 augroup taskpaper
      au! BufRead,BufNewFile *.taskpaper   setfiletype taskpaper
+     au! BufRead,BufNewFile todo          setfiletype taskpaper
 augroup END

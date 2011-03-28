@@ -36,6 +36,7 @@ map <S-Ins> "+p
 " Filetypes ==================================================================
 syntax on
 filetype plugin on
+filetype plugin indent on
 let filetype_asm = "nasm"
 let filetype_sql = "mysql"
 autocmd BufRead *.thtml setlocal filetype=php
