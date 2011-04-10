@@ -49,15 +49,6 @@ au FileType tex setlocal textwidth=78
 au FileType tex setlocal shiftwidth=2
 au FileType tex setlocal spell
 
-" Omni completion
-autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
-autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
-autocmd FileType html setlocal omnifunc=htmlcomplete#CompleteTags
-autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
-autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
-autocmd FileType php setlocal omnifunc=phpcomplete#CompletePHP
-autocmd FileType c setlocal omnifunc=ccomplete#Complete
-
 " Language settings ==========================================================
 
 " Spell settings
