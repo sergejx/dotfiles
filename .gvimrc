@@ -10,4 +10,4 @@ set cursorline
 let g:molokai_original=1
 let g:bg_tango = 1
 let g:mayansmoke_cursor_line_visibility = 1
-colorscheme solarized
+colorscheme wombat
