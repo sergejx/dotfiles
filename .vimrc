@@ -16,6 +16,7 @@ let maplocalleader = ","
 set linebreak
 map <Up> gk
 map <Down> gj
+set display=lastline "show beginning of long last line
 
 set wildmenu
 set wildignore+=*.pyc,*.pyo,*.hi,*.o " Programming
@@ -45,7 +46,6 @@ autocmd FileType html,xhtml,xml,php source ~/.vim/scripts/closetag.vim
 autocmd FileType make setlocal noexpandtab nosmarttab
 let python_highlight_all = 1
 
-au FileType tex setlocal textwidth=78
 au FileType tex setlocal shiftwidth=2
 au FileType tex setlocal spell
 
