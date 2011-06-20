@@ -7,7 +7,7 @@ if [ -d ~/.cabal/bin ]; then
 fi
 
 export EDITOR=vim
-export BROWSER=firefox4
+export BROWSER=firefox
 export LESSCHARSET="utf-8"
 export DARCS_DONT_ESCAPE_8BIT=1
 export DARCS_ALWAYS_COLOR=1
