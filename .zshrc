@@ -34,6 +34,7 @@ setopt autocd
 ### Functions and aliases ###
 alias ge="outofterm gedit"
 alias nau="outofterm nautilus ."
+function svndiff () { svn diff $@ | colordiff |less -R; }
 
 ### Helper functions ###
 function outofterm () {
