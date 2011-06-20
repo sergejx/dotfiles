@@ -20,10 +20,10 @@ function link_file() {
 # main
 for f in .*; do
 case "$f" in
-        . | .. | .git) ;;
-        * ) link_file $f;;
+        . | .. | .git | .local ) ;;
+        * ) link_file $f ;;
     esac
 done
-for f in bin/*; do
+for f in .local/bin/*; do
     link_file $f
 done
