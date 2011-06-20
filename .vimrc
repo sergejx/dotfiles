@@ -86,6 +86,6 @@ if has("gui_running")
     let g:mayansmoke_cursor_line_visibility = 1
     let g:solarized_contrast = "high"
     set background=light
-    colorscheme solarized
+    colorscheme mayansmoke
     call togglebg#map("<F5>")
 endif
