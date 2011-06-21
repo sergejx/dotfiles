@@ -7,8 +7,8 @@ fi
 
 # User specific environment and startup programs
 
-if [ -d ~/bin ]; then
-    PATH=$HOME/bin:$HOME/.cabal/bin:$HOME/.gem/ruby/1.8/bin:$PATH
+if [ -d ~/.local/bin ]; then
+    PATH=$HOME/.local/bin
     export PATH
 fi
 

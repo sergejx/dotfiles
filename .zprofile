@@ -1,5 +1,5 @@
-if [ -d ~/bin ]; then
-    export PATH=$HOME/bin:$PATH
+if [ -d ~/.local/bin ]; then
+    export PATH=$HOME/.local/bin:$PATH
 fi
 
 if [ -d ~/.cabal/bin ]; then
