@@ -73,7 +73,7 @@ set imsearch=0
 
 " GUI ========================================================================
 if has("gui_running")
-    set guifont=Liberation\ Mono\ 10
+    set guifont=DejaVu\ Sans\ Mono\ 10
     set guioptions-=m   "disable menu
     set guioptions-=T   "disable toolbar
     set number          "show line numbers
@@ -85,7 +85,5 @@ if has("gui_running")
     let g:bg_tango = 1
     let g:mayansmoke_cursor_line_visibility = 1
     let g:solarized_contrast = "high"
-    set background=light
-    colorscheme mayansmoke
-    call togglebg#map("<F5>")
+    colorscheme zenburn
 endif
