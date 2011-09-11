@@ -36,6 +36,9 @@ set pastetoggle=<F3>
 imap <S-Ins> <Esc>"+pa
 map <S-Ins> "+p
 
+" comments should be indented too
+let g:EnhCommentifyRespectIndent='yes'
+
 " Filetypes ==================================================================
 syntax on
 filetype plugin indent on
@@ -54,23 +57,6 @@ au FileType tex setlocal shiftwidth=2 spell
 set spelllang=sk
 set spellsuggest=fast,14
 
-" Keymaps switching
-function! SwitchKeymap ()
-    if &keymap =~ 'russian'
-        set keymap=slovak-querty
-    else
-        set keymap=russian-yazherty
-    endif
-endfunction
-" Alt-^
-imap <M-6> <Esc>:call SwitchKeymap ()<CR>a
-
-" By default use Slovak mapping
-set keymap=slovak-querty
-" but make it inactive
-set iminsert=0
-set imsearch=0
-
 " GUI ========================================================================
 if has("gui_running")
     set guifont=DejaVu\ Sans\ Mono\ 10
@@ -85,5 +71,5 @@ if has("gui_running")
     let g:bg_tango = 1
     let g:mayansmoke_cursor_line_visibility = 1
     let g:solarized_contrast = "high"
-    colorscheme zenburn
+    colorscheme Tomorrow
 endif
