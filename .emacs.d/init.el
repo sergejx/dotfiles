@@ -2,6 +2,8 @@
 (add-to-list 'load-path "~/.emacs.d")
 (add-to-list 'load-path "~/.emacs.d/vendor")
 
+(load "kbd/slovak.el")
+
 ;; Custom place to save customizations
 (setq custom-file "~/.emacs.d/custom.el")
 (load custom-file)
@@ -15,8 +17,8 @@
 (set-scroll-bar-mode 'right)
 (setq scroll-step 1)
 (setq mouse-wheel-scroll-amount '(1 ((shift) . 1) ((control))))
-(global-visual-line-mode 1) ; Word wrap
-
+;(global-visual-line-mode 1) ; Word wrap
+(add-hook 'text-mode-hook 'turn-on-visual-line-mode)
 
 ;; Behaviour
 (setq make-backup-files nil)
@@ -29,7 +31,7 @@
 
 ;; Global settings
 (setq require-final-newline t) ; Put newline after last line
-(add-hook 'before-save-hook 'delete-trailing-whitespace)
+;(add-hook 'before-save-hook 'delete-trailing-whitespace)
 
 ;; Modes
 (ido-mode t)
@@ -50,6 +52,10 @@
 (add-hook 'markdown-mode-hook
           (lambda ()
             (define-key markdown-mode-map "\C-c\C-cs" 'markdown-to-slideshow)))
+
+;; Deft
+(require 'deft)
+(setq deft-text-mode 'markdown-mode)
 
 ;; JavaScript
 (autoload 'js2-mode "js2" nil t)
