@@ -28,7 +28,7 @@ set wildignore+=*.aux,*.dvi,*.pdf,*.log,*.out,*.bbl,*.blg,*.fdb_latexmk " LaTeX
 set lcs=trail:·,tab:»-,nbsp:°
 map <F12> :set list!<CR>
 
-set makeprg=~/bin/build.sh\ %
+set makeprg=~/.local/bin/build.sh\ %
 map <F8> :make<cr>
 
 set pastetoggle=<F3>
@@ -42,7 +42,6 @@ let g:EnhCommentifyRespectIndent='yes'
 " Filetypes ==================================================================
 syntax on
 filetype plugin indent on
-let filetype_asm = "nasm"
 let filetype_sql = "mysql"
 autocmd FileType html,xhtml,xml,xsl setlocal shiftwidth=2
 autocmd FileType html,xhtml,xml,php source ~/.vim/scripts/closetag.vim
@@ -68,8 +67,6 @@ if has("gui_running")
     "Colors
     set cursorline
     let g:molokai_original=1
-    let g:bg_tango = 1
     let g:mayansmoke_cursor_line_visibility = 1
-    let g:solarized_contrast = "high"
     colorscheme Tomorrow
 endif
