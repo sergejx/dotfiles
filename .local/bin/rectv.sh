@@ -3,7 +3,7 @@
 # Give URL of stream as script argument
 # Every time script is running it creates new file with increased number
 
-PREFIX=~/Plocha/tv
+PREFIX=~/tv
 NUM=1
 POSTFIX=.asf
 
