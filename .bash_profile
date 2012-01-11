@@ -7,10 +7,8 @@ fi
 
 # User specific environment and startup programs
 
-if [ -d ~/.local/bin ]; then
-    PATH=$HOME/.local/bin
-    export PATH
-fi
+PATH=$PATH:$HOME/.local/bin:$HOME/bin
+export PATH
 
 export EDITOR=vim
 export BROWSER=firefox
