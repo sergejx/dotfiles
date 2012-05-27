@@ -43,6 +43,9 @@ else
     "py")
         run pyflakes $FILENAME
         ;;
+    "less")
+        run lessc $FILENAME ${FILENAME%.less}.css
+        ;;
     "markdown")
         run markdown $FILENAME -f ${FILENAME%.markdown}.html
         ;;
