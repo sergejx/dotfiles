@@ -56,6 +56,12 @@ au FileType tex setlocal shiftwidth=2 spell
 set spelllang=sk
 set spellsuggest=fast,14
 
+" By default use Slovak mapping
+set keymap=slovak-querty
+" but make it inactive
+set iminsert=0
+set imsearch=0
+
 " GUI ========================================================================
 if has("gui_running")
     set guifont=DejaVu\ Sans\ Mono\ 10
