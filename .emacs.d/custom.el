@@ -7,6 +7,8 @@
  '(default-input-method "slovak-qwerty")
  '(haskell-font-lock-symbols t)
  '(haskell-indent-look-past-empty-line nil)
+ '(haskell-literate-default (quote tex))
+ '(haskell-mode-hook (quote (turn-on-haskell-indent)))
  '(scheme-program-name "guile"))
 (custom-set-faces
   ;; custom-set-faces was added by Custom.
