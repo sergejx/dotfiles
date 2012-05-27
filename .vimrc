@@ -59,14 +59,14 @@ set spellsuggest=fast,14
 " GUI ========================================================================
 if has("gui_running")
     set guifont=DejaVu\ Sans\ Mono\ 10
-    set guioptions-=m   "disable menu
     set guioptions-=T   "disable toolbar
     set number          "show line numbers
     set columns=84      "to make space for line numbers
     set lines=64        "make default window higher
     "Colors
-    set cursorline
+    "set cursorline
     let g:molokai_original=1
     let g:mayansmoke_cursor_line_visibility = 1
-    colorscheme Tomorrow
+    let g:solarized_contrast="high"
+    colorscheme solarized
 endif
