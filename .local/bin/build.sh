@@ -1,6 +1,6 @@
 #!/bin/bash
 # Compile file with right tool based on file extension.
-# If Makefile exists in direcotory, then run make.
+# If Makefile exists in current direcotory, then run make.
 
 function run() {
     echo $@
@@ -19,8 +19,6 @@ function find_tex_master() {
 FILENAME=$1
 if [ -f Makefile -o -f makefile ]
     then run make
-elif [ -f SConstruct ]
-    then run scons -Q
 else
     EXT=${FILENAME##*.}
     case "$EXT" in
