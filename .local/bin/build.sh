@@ -24,7 +24,7 @@ else
     case "$EXT" in
     "tex")
         FILENAME=`find_tex_master $FILENAME`
-        run rubber --pdf $FILENAME
+        run latexmk $FILENAME
         ;;
     "java")
         run javac $FILENAME
