@@ -1,7 +1,25 @@
+;; Packages ------------
+(require 'package)
+(add-to-list 'package-archives
+             '("marmelade" . "http://marmalade-repo.org/packages/") t)
+(package-initialize)
+
+(when (not package-archive-contents)
+  (package-refresh-contents))
+
+(defvar my-packages
+  '(starter-kit starter-kit-bindings starter-kit-lisp starter-kit-js
+                markdown-mode haskell-mode magit
+                solarized-theme)
+  "A list of packages to ensure are installed at launch.")
+
+(dolist (p my-packages)
+  (when (not (package-installed-p p))
+    (package-install p)))
+
 ;; Global settings
 (add-to-list 'load-path "~/.emacs.d")
-(add-to-list 'load-path "~/.emacs.d/vendor")
-
+(setq-default ispell-program-name "aspell")
 (load "kbd/slovak.el")
 
 ;; Custom place to save customizations
@@ -9,16 +27,14 @@
 (load custom-file)
 
 ;; Look & Feel
-(setq inhibit-startup-message t)
-(setq inhibit-startup-echo-area-message t)
-(tool-bar-mode -1) ; no toolbar
 (setq-default indicate-empty-lines t)
 ; Scrolling
 (set-scroll-bar-mode 'right)
-(setq scroll-step 1)
-(setq mouse-wheel-scroll-amount '(1 ((shift) . 1) ((control))))
+;(setq scroll-step 1)
+;(setq mouse-wheel-scroll-amount '(1 ((shift) . 1) ((control))))
 ;(global-visual-line-mode 1) ; Word wrap
 (add-hook 'text-mode-hook 'turn-on-visual-line-mode)
+(load-theme 'solarized-light t)
 
 ;; Behaviour
 (setq make-backup-files nil)
@@ -33,13 +49,9 @@
 (setq require-final-newline t) ; Put newline after last line
 ;(add-hook 'before-save-hook 'delete-trailing-whitespace)
 
-;; Modes
-(ido-mode t)
-
 ;; Markdown
-(autoload 'markdown-mode "markdown-mode.el"
-  "Major mode for editing Markdown files" t)
 (add-to-list 'auto-mode-alist '("\\.markdown$" . markdown-mode))
+(add-to-list 'auto-mode-alist '("\\.md$" . markdown-mode))
 
 (defun markdown-to-slideshow ()
   "Convert Markdown to S5 slideshow"
@@ -48,18 +60,9 @@
     (shell-command
      (concat "pandoc -w s5 -s -o " name-root ".html " (buffer-file-name)))))
 
-
 (add-hook 'markdown-mode-hook
           (lambda ()
             (define-key markdown-mode-map "\C-c\C-cs" 'markdown-to-slideshow)))
-
-;; Deft
-(require 'deft)
-(setq deft-text-mode 'markdown-mode)
-
-;; JavaScript
-(autoload 'js2-mode "js2" nil t)
-(add-to-list 'auto-mode-alist '("\\.js$" . js2-mode))
 
 ;; Org
 (require 'org-install)

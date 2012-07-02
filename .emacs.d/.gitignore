@@ -1,3 +1,7 @@
 *.elc
-/games
+/.*
 /auto-save-list
+/backups
+/elpa
+/games
+/places
