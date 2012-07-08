@@ -9,8 +9,7 @@
 
 (defvar my-packages
   '(starter-kit starter-kit-bindings starter-kit-lisp starter-kit-js
-                markdown-mode haskell-mode magit
-                solarized-theme)
+                markdown-mode haskell-mode magit color-theme-solarized)
   "A list of packages to ensure are installed at launch.")
 
 (dolist (p my-packages)
@@ -27,22 +26,20 @@
 (load custom-file)
 
 ;; Look & Feel
-(setq-default indicate-empty-lines t)
+(load-theme 'solarized-light)
 ; Scrolling
 (set-scroll-bar-mode 'right)
 ;(setq scroll-step 1)
 ;(setq mouse-wheel-scroll-amount '(1 ((shift) . 1) ((control))))
 ;(global-visual-line-mode 1) ; Word wrap
 (add-hook 'text-mode-hook 'turn-on-visual-line-mode)
-(load-theme 'solarized-light t)
 
 ;; Behaviour
-(setq make-backup-files nil)
-(windmove-default-keybindings 'meta) ; Move between windows with M-arrows
+;(setq make-backup-files nil)
 
 ;; Indentation
-(global-set-key (kbd "RET") 'newline-and-indent)
-(setq-default indent-tabs-mode nil)
+;(global-set-key (kbd "RET") 'newline-and-indent)
+;(setq-default indent-tabs-mode nil)
 (setq-default c-basic-offset 4)
 
 ;; Global settings
