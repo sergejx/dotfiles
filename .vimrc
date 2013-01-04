@@ -1,5 +1,8 @@
 set nocompatible
 
+" Pathogen
+call pathogen#infect()
+
 " Tabs & indentation
 set expandtab
 set smarttab
