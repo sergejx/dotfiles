@@ -1,16 +1,19 @@
 #!/bin/sh
 
+DOTFILES=$HOME/.dotfiles
+
 function link_file() {
     name=$HOME/$1
-    target=$PWD/$1
-    if [ -e $name ]; then
-        if [ -L $name ]; then
-            if [ $target != $(readlink $name) ]; then
-                echo "Link $1 exists, but points to different file."
-            fi
-        else
-            echo "File $1 already exists."
+    target=$DOTFILES/$1
+    if [ -L $name ]; then
+        if [ $target != $(readlink $name) ]; then
+            echo "Link $1 exists, but points to $(readlink $name)"
+            echo "Replacing it!"
+            rm $name
+            ln -s $target $name
         fi
+    elif [ -e $name ]; then
+        echo "File $1 already exists."
     else
         echo "Linking $1"
         ln -s $target $name
@@ -18,12 +21,12 @@ function link_file() {
 }
 
 # main
-for f in .*; do
-case "$f" in
-        . | .. | .git | .local ) ;;
+for f in $(ls -a $DOTFILES); do
+    case "$f" in
+        . | .. | .git | .local | .gitmodules | install.sh ) ;;
         * ) link_file $f ;;
     esac
 done
-for f in .local/bin/*; do
-    link_file $f
+for f in $(ls $DOTFILES/.local/bin); do
+    link_file .local/bin/$f
 done
