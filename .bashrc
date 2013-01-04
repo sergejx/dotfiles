@@ -8,7 +8,7 @@ fi
 # User specific aliases and functions
 
 # Prompt
-PS1='\[\e[0;32m\]\u@\h \[\e[1;34m\]\W \[\e[0;34m\]\$ \[\e[m\]'
+PS1='\[\e[0;32m\]\u@\h \[\e[1;34m\]\w \[\e[0;34m\]\$ \[\e[m\]'
 
 # Bash options
 HISTSIZE=10000
