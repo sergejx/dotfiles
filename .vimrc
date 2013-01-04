@@ -9,6 +9,9 @@ set smarttab
 set shiftwidth=4
 set autoindent
 
+set textwidth=78
+set colorcolumn=81
+
 " UI
 set laststatus=2
 set visualbell
@@ -16,19 +19,26 @@ set visualbell
 let mapleader = ","
 let maplocalleader = ","
 
+" allow hidden buffers
+set hidden
+" set autowriteall
+" autocmd FocusLost * :update
+
 set linebreak
-map <Up> gk
-map <Down> gj
+nnoremap k gk
+nnoremap j gj
 set display=lastline    "show beginning of long last line
 set scrolloff=3         "keep 3 lines on edges
 set shortmess=I         "don't display intro message
+nnoremap <leader>q gqip
+set formatoptions+=1
 
 set wildmenu
 set wildignore+=*.pyc,*.pyo,*.hi,*.o " Programming
 set wildignore+=*.aux,*.dvi,*.pdf,*.log,*.out,*.bbl,*.blg,*.fdb_latexmk " LaTeX
 
 " Display white spaces with F12
-set lcs=trail:·,tab:»-,nbsp:°
+set lcs=trail:·,tab:▸\ ,nbsp:°
 map <F12> :set list!<CR>
 
 set makeprg=~/.local/bin/build.sh\ %
@@ -39,15 +49,12 @@ set pastetoggle=<F3>
 imap <S-Ins> <Esc>"+pa
 map <S-Ins> "+p
 
-" comments should be indented too
-let g:EnhCommentifyRespectIndent='yes'
-
 " Filetypes ==================================================================
 syntax on
 filetype plugin indent on
 let filetype_sql = "mysql"
 autocmd FileType html,xhtml,xml,xsl setlocal shiftwidth=2
-autocmd FileType html,xhtml,xml,php source ~/.vim/scripts/closetag.vim
+autocmd FileType html,xhtml,xml,php source ~/.vim/bundle/closetag.vim/plugin/closetag.vim
 autocmd FileType make setlocal noexpandtab nosmarttab
 let python_highlight_all = 1
 
@@ -78,4 +85,5 @@ if has("gui_running")
     let g:mayansmoke_cursor_line_visibility = 1
     let g:solarized_contrast="high"
     colorscheme solarized
+    call togglebg#map("")
 endif
