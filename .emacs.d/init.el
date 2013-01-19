@@ -38,8 +38,8 @@
 ;(setq make-backup-files nil)
 
 ;; Indentation
-;(global-set-key (kbd "RET") 'newline-and-indent)
-;(setq-default indent-tabs-mode nil)
+(global-set-key (kbd "RET") 'newline-and-indent)
+(setq-default indent-tabs-mode nil)
 (setq-default c-basic-offset 4)
 
 ;; Global settings
