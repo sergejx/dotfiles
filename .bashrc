@@ -8,7 +8,10 @@ fi
 # User specific aliases and functions
 
 # Prompt
-PS1='\[\e[0;32m\]\u@\h \[\e[1;34m\]\w \[\e[0;34m\]\$ \[\e[m\]'
+PSdir='\[\e[0;32m\]\w\[\e[m\]'
+PSusr='\u@\h \[\e[0;34m\]\$ \[\e[m\]'
+PSsmile="\$(if [[ \$? != 0 ]]; then echo \"\[\033[0;31m\]:( \"; fi)\[\033[00m\]"
+PS1="\n $PSdir\n$PSsmile$PSusr"
 
 # Bash options
 HISTSIZE=10000
