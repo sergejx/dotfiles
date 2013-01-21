@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8'?>
+<snippets language="js">
+  <snippet>
+    <text><![CDATA[\$(document).ready(function() {
+	$0
+});]]></text>
+    <tag>ready</tag>
+    <description>Document Ready</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[function($1) {
+	$0
+}]]></text>
+    <tag>fun</tag>
+    <description>Function</description>
+  </snippet>
+</snippets>

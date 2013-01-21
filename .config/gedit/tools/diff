@@ -1,0 +1,9 @@
+#!/bin/sh
+# [Gedit Tool]
+# Input=nothing
+# Save-files=nothing
+# Name=Diff
+# Applicability=local
+# Output=nothing
+
+meld $GEDIT_CURRENT_DOCUMENT_NAME &

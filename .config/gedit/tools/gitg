@@ -1,0 +1,9 @@
+#!/bin/sh
+# [Gedit Tool]
+# Input=nothing
+# Save-files=nothing
+# Name=Git
+# Applicability=local
+# Output=nothing
+
+gitg $GEDIT_CURRENT_DOCUMENT_DIR &

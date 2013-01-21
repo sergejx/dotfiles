@@ -23,10 +23,15 @@ function link_file() {
 # main
 for f in $(ls -a $DOTFILES); do
     case "$f" in
-        . | .. | .git | .local | .gitmodules | install.sh ) ;;
+        . | .. | .git | .local | .config | .gitmodules | install.sh ) ;;
         * ) link_file $f ;;
     esac
 done
+# ~/.local/bin/*
 for f in $(ls $DOTFILES/.local/bin); do
     link_file .local/bin/$f
+done
+# ~/.config/gedit/{tools,snippets}
+for f in .config/gedit/{tools,snippets}; do
+    link_file $f
 done
