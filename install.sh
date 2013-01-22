@@ -32,6 +32,6 @@ for f in $(ls $DOTFILES/.local/bin); do
     link_file .local/bin/$f
 done
 # ~/.config/gedit/{tools,snippets}
-for f in .config/gedit/{tools,snippets}; do
+for f in .config/gedit/{tools,snippets,indentation-settings}; do
     link_file $f
 done
