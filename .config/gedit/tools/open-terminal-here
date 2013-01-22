@@ -2,6 +2,7 @@
 # [Gedit Tool]
 # Comment=Otvoriť terminál na umiestnení dokumentu
 # Name=Otvoriť terminál tu
+# Shortcut=<Primary><Alt>t
 # Languages=
 # Applicability=local
 # Output=nothing
