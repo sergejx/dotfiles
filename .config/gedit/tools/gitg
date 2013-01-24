@@ -1,9 +1,10 @@
 #!/bin/sh
 # [Gedit Tool]
-# Input=nothing
-# Save-files=nothing
 # Name=Git
+# Shortcut=<Primary><Alt>g
 # Applicability=local
 # Output=nothing
+# Input=nothing
+# Save-files=nothing
 
 gitg $GEDIT_CURRENT_DOCUMENT_DIR &

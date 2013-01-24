@@ -19,4 +19,20 @@ $0]]></text>
     <tag>par</tag>
     <description>Paragraph</description>
   </snippet>
+  <snippet override="latex-sub">
+    <text><![CDATA[\subsection{${1:subsection name}}]]></text>
+    <tag>sub</tag>
+    <description>Sub Section</description>
+  </snippet>
+  <snippet override="latex-ssub">
+    <text><![CDATA[\subsubsection{${1:subsubsection name}}]]></text>
+    <tag>ssub</tag>
+    <description>Sub Sub Section</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[% ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ %
+$0]]></text>
+    <tag>~</tag>
+    <description>Divider comment</description>
+  </snippet>
 </snippets>
