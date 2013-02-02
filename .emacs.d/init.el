@@ -74,3 +74,6 @@
                                 (interactive)
                                 (tex-send-command "xdg-open"
                                   (tex-append tex-print-file ".pdf")))))
+
+;; Magit
+(setq magit-status-buffer-switch-function 'switch-to-buffer)
