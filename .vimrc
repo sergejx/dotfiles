@@ -1,37 +1,32 @@
+" Basic setup
 set nocompatible
-
-" Pathogen
 call pathogen#infect()
+syntax on
+filetype plugin indent on
 
 " Tabs & indentation
-set expandtab
-set smarttab
-set shiftwidth=4
+set expandtab           "Use spaces
+set shiftwidth=4        "4 spaces for indentation (but keep tabwidth)
+set smarttab            "Use shiftwidth in the beginning of line
 set autoindent
 
-set textwidth=78
-set colorcolumn=81
-
-" UI
-set laststatus=2
 set visualbell
 
 let mapleader = ","
 let maplocalleader = ","
 
-" allow hidden buffers
-set hidden
-" set autowriteall
-" autocmd FocusLost * :update
+set hidden              " allow hidden buffers
 
-set linebreak
+set linebreak           "Visually wrap lines
 nnoremap k gk
 nnoremap j gj
-set display=lastline    "show beginning of long last line
-set scrolloff=3         "keep 3 lines on edges
-set shortmess=I         "don't display intro message
-nnoremap <leader>q gqip
-set formatoptions+=1
+set display=lastline    "Show beginning of long last line
+set scrolloff=3         "Keep 3 lines on edges
+set shortmess=I         "Don't display intro message
+
+"set textwidth=78        "Set standard line length
+" set formatoptions+=1    "but don't break lines automatically
+" nnoremap <leader>q gqip
 
 set wildmenu
 set wildignore+=*.pyc,*.pyo,*.hi,*.o " Programming
@@ -50,8 +45,6 @@ imap <S-Ins> <Esc>"+pa
 map <S-Ins> "+p
 
 " Filetypes ==================================================================
-syntax on
-filetype plugin indent on
 let filetype_sql = "mysql"
 autocmd FileType html,xhtml,xml,xsl setlocal shiftwidth=2
 autocmd FileType html,xhtml,xml,php source ~/.vim/bundle/closetag.vim/plugin/closetag.vim
@@ -64,7 +57,7 @@ au FileType tex setlocal shiftwidth=2 spell
 
 " Spell settings
 set spelllang=sk
-set spellsuggest=fast,14
+"set spellsuggest=fast,14
 
 " By default use Slovak mapping
 set keymap=slovak-querty
@@ -76,14 +69,8 @@ set imsearch=0
 if has("gui_running")
     set guifont=DejaVu\ Sans\ Mono\ 10
     set guioptions-=T   "disable toolbar
-    set number          "show line numbers
-    set columns=84      "to make space for line numbers
     set lines=64        "make default window higher
     "Colors
-    "set cursorline
-    let g:molokai_original=1
-    let g:mayansmoke_cursor_line_visibility = 1
-    let g:solarized_contrast="high"
-    colorscheme solarized
-    call togglebg#map("")
+    set cursorline
+    colorscheme forest
 endif
