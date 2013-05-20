@@ -23,7 +23,7 @@ function link_file() {
 # main
 for f in $(ls -a $DOTFILES); do
     case "$f" in
-        . | .. | .git | .local | .config | .gitmodules | install.sh ) ;;
+        . | .. | .git | .local | .config | .gitmodules | install.sh | oh-my-zsh ) ;;
         * ) link_file $f ;;
     esac
 done
