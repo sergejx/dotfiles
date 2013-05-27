@@ -45,3 +45,12 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
+
+alias ge="outofterm gedit"
+alias nau="outofterm nautilus ."
+
+function outofterm () {
+    command=$1
+    shift
+    $command $@ >/dev/null 2>&1 &!
+}
