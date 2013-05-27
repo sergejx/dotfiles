@@ -66,6 +66,7 @@ set iminsert=0
 set imsearch=0
 
 " GUI ========================================================================
+set background=dark     "dark background in terminal
 if has("gui_running")
     set guifont=DejaVu\ Sans\ Mono\ 10
     set guioptions-=T   "disable toolbar
