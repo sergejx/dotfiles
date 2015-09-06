@@ -1,0 +1,5 @@
+#!/bin/sh
+# Swap VE and ZHE in russian phonetic keyboard
+sed -i "/LatW/s/Cyrillic_ve/Cyrillic_zhe/; /LatW/s/Cyrillic_VE/Cyrillic_ZHE/; \
+        /LatV/s/Cyrillic_zhe/Cyrillic_ve/; /LatV/s/Cyrillic_ZHE/Cyrillic_VE/" \
+        /usr/share/X11/xkb/symbols/ru

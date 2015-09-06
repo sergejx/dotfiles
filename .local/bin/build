@@ -24,17 +24,17 @@ else
     case "$EXT" in
     "tex")
         FILENAME=`find_tex_master $FILENAME`
-        TEX_PATTERNS="*.{aux,bbl,blg,fdb_latexmk,fls,log,out,toc,tof}"
-        if [ -e _tex ]
-            then eval mv _tex/$TEX_PATTERNS . 2> /dev/null
-        fi
-        run latexmk $FILENAME
-        RC=$?
-        if [ ! -e _tex ]
-            then mkdir _tex
-        fi
-        eval mv $TEX_PATTERNS _tex 2> /dev/null
-        exit $RC
+#        TEX_PATTERNS="*.{aux,bbl,blg,fdb_latexmk,fls,log,out,toc,tof}"
+#        if [ -e _tex ]
+#            then eval mv _tex/$TEX_PATTERNS . 2> /dev/null
+#        fi
+        run rubber --pdf $FILENAME
+#        RC=$?
+#        if [ ! -e _tex ]
+#            then mkdir _tex
+#        fi
+#        eval mv $TEX_PATTERNS _tex 2> /dev/null
+#        exit $RC
         ;;
     "java")
         run javac $FILENAME

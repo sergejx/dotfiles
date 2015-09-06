@@ -98,3 +98,6 @@ _ %
 +z ž
 +Z Ž
 
+" specialne znaky
+33 #
+
