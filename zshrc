@@ -12,6 +12,7 @@ fi
 alias ge="outofterm gedit"
 alias nau="outofterm nautilus ."
 alias yds="yandex-disk status"
+alias ydstart="yandex-disk start"
 
 function outofterm () {
     $@ >/dev/null 2>&1 &!
