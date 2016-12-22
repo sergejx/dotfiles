@@ -1,0 +1,9 @@
+[user]
+	name = Sergej Chodarev
+	email = sergej.chodarev@ya.ru
+[alias]
+	st = status
+[color]
+	ui = auto
+[diff]
+	tool = meld

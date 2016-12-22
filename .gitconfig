@@ -1,9 +1,0 @@
-[user]
-	name = Sergej Chodarev
-	email = sergejx@centrum.sk
-[alias]
-	st = status
-[color]
-	ui = auto
-[push]
-	default = simple

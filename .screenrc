@@ -1,2 +1,0 @@
-startup_message off
-hardstatus alwayslastline "%{= b} %-w%{+b}[%n* %t]%{-b}%+w %= %{= w}%c"
