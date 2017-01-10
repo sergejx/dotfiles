@@ -5,13 +5,14 @@ call plug#begin()
     Plug 'tpope/vim-repeat'
     Plug 'tpope/vim-surround'
     Plug 'tpope/vim-unimpaired'
+    Plug 'ervandew/supertab'
+    Plug 'SirVer/ultisnips'
     " Utilities & tools
     Plug 'tpope/vim-eunuch'
     Plug 'tpope/vim-vinegar'
     Plug 'tpope/vim-fugitive'
     Plug 'sjl/gundo.vim'
     Plug 'ctrlpvim/ctrlp.vim'
-    Plug 'ervandew/supertab'
     Plug 'mileszs/ack.vim'
     " Look & feel
     Plug 'rakr/vim-one'
@@ -95,20 +96,15 @@ set wildignore+=node_modules,bower_components
 " User Interface ============================================================
 set visualbell                  " Don't beep
 let g:airline_powerline_fonts=1 " Nice arrows
+set termguicolors   " Use full color palette even in terminal
+set background=dark " Dark theme for terminal
+let g:one_allow_italics=1
+colorscheme one
 
 if has("gui_running")
-    " Light One color scheme
-    set background=light
-    let g:one_allow_italics=1
-    colorscheme one
-    " Font
+    set background=light    " Light colors in GUI
     set guifont=Source\ Code\ Pro\ 10
-    set linespace=-1    " Source Code Pro have too height lines
-
-    set guioptions=aegi " Disable toolbar, menu and scrollbars
-    set lines=42        " Make default window higher
+    set guioptions=aegi     " Disable toolbar, menu and scrollbars
+    set lines=38            " Make default window higher
 else
-    " Dark theme for terminal
-    set background=dark
-    let g:airline_theme='term'
 endif
