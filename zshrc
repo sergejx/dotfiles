@@ -17,3 +17,7 @@ alias ydstart="yandex-disk start"
 function outofterm () {
     $@ >/dev/null 2>&1 &!
 }
+
+function make-dark () {
+    xprop -f _GTK_THEME_VARIANT 8u -set _GTK_THEME_VARIANT dark
+}

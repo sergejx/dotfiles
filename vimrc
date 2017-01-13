@@ -5,7 +5,6 @@ call plug#begin()
     Plug 'tpope/vim-repeat'
     Plug 'tpope/vim-surround'
     Plug 'tpope/vim-unimpaired'
-    Plug 'ervandew/supertab'
     Plug 'SirVer/ultisnips'
     " Utilities & tools
     Plug 'tpope/vim-eunuch'
@@ -95,16 +94,20 @@ set wildignore+=node_modules,bower_components
 
 " User Interface ============================================================
 set visualbell                  " Don't beep
-let g:airline_powerline_fonts=1 " Nice arrows
-set termguicolors   " Use full color palette even in terminal
-set background=dark " Dark theme for terminal
+set termguicolors               " Use full color palette even in terminal
+set background=dark             " Dark theme for terminal
 let g:one_allow_italics=1
 colorscheme one
+" Vim Airline
+let g:airline_powerline_fonts=1
+let g:airline#extensions#whitespace#enabled = 0
 
 if has("gui_running")
     set background=light    " Light colors in GUI
     set guifont=Source\ Code\ Pro\ 10
-    set guioptions=aegi     " Disable toolbar, menu and scrollbars
+    set guioptions-=T       " Disable toolbar
+    set guioptions-=m       " Disable menu
+    set guioptions-=r       " Disable right scrollbar
+    set guioptions-=L       " Disable left scrollbar
     set lines=38            " Make default window higher
-else
 endif
