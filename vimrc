@@ -6,11 +6,12 @@ call plug#begin()
     Plug 'tpope/vim-surround'
     Plug 'tpope/vim-unimpaired'
     Plug 'SirVer/ultisnips'
+    Plug 'editorconfig/editorconfig-vim'
     " Utilities & tools
     Plug 'tpope/vim-eunuch'
     Plug 'tpope/vim-vinegar'
     Plug 'tpope/vim-fugitive'
-    Plug 'sjl/gundo.vim'
+    Plug 'mbbill/undotree'
     Plug 'ctrlpvim/ctrlp.vim'
     Plug 'mileszs/ack.vim'
     " Look & feel
@@ -55,13 +56,17 @@ noremap j gj
 " Paste from X clipboard
 noremap  <S-Ins> "+p
 inoremap <S-Ins> <C-r>+
+" Ultisnip jump to placeholder using <tab>
+let g:UltiSnipsJumpForwardTrigger="<tab>"
 " CtrlP in MRU mode
 nnoremap <C-N> :CtrlPMRU<CR>
+" List spelling suggestion for slovak layout
+nnoremap z- z=
 " Switch spell language
 nnoremap <F2> :set spelllang=sk<cr>
 nnoremap <C-F2> :set spelllang=en<cr>
 " Gundo
-nnoremap <F5> :GundoToggle<CR>
+nnoremap <F5> :UndotreeToggle<CR>
 " Make
 nnoremap <F8> :make<CR>
 " Open terminal
@@ -99,15 +104,15 @@ set background=dark             " Dark theme for terminal
 let g:one_allow_italics=1
 colorscheme one
 " Vim Airline
-let g:airline_powerline_fonts=1
 let g:airline#extensions#whitespace#enabled = 0
 
 if has("gui_running")
     set background=light    " Light colors in GUI
-    set guifont=Source\ Code\ Pro\ 10
+    set guifont=Fira\ Mono\ 10
     set guioptions-=T       " Disable toolbar
     set guioptions-=m       " Disable menu
     set guioptions-=r       " Disable right scrollbar
     set guioptions-=L       " Disable left scrollbar
-    set lines=38            " Make default window higher
+    set lines=41            " Make default window taller
+    set columns=82          " and wider
 endif
