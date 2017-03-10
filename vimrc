@@ -17,7 +17,6 @@ call plug#begin()
     " Look & feel
     Plug 'rakr/vim-one'
     Plug 'vim-airline/vim-airline'
-    Plug 'vim-airline/vim-airline-themes'
     " File types
     Plug 'lervag/vimtex'
     Plug 'django.vim'
@@ -105,6 +104,7 @@ let g:one_allow_italics=1
 colorscheme one
 " Vim Airline
 let g:airline#extensions#whitespace#enabled = 0
+set noshowmode                  " No need for default mode indicator
 
 if has("gui_running")
     set background=light    " Light colors in GUI
