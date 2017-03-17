@@ -14,6 +14,7 @@ call plug#begin()
     Plug 'mbbill/undotree'
     Plug 'ctrlpvim/ctrlp.vim'
     Plug 'mileszs/ack.vim'
+    Plug 'airblade/vim-gitgutter'
     " Look & feel
     Plug 'rakr/vim-one'
     Plug 'vim-airline/vim-airline'
@@ -113,6 +114,6 @@ if has("gui_running")
     set guioptions-=m       " Disable menu
     set guioptions-=r       " Disable right scrollbar
     set guioptions-=L       " Disable left scrollbar
-    set lines=41            " Make default window taller
-    set columns=82          " and wider
+    set lines=42            " Make default window taller
+    set columns=84          " and wider
 endif
