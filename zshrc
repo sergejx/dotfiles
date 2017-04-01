@@ -1,23 +1,35 @@
 #
-# Executes commands at the start of an interactive session.
+# User configuration sourced by interactive shells
 #
 
-# Source Prezto.
-if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
-  source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+# Source zim
+if [[ -s ${ZDOTDIR:-${HOME}}/.zim/init.zsh ]]; then
+  source ${ZDOTDIR:-${HOME}}/.zim/init.zsh
 fi
 
 # Aliases and functions
-
-alias ge="outofterm gedit"
-alias nau="outofterm nautilus ."
-alias yds="yandex-disk status"
-alias ydstart="yandex-disk start"
-
 function outofterm () {
     $@ >/dev/null 2>&1 &!
 }
 
-function make-dark () {
-    xprop -f _GTK_THEME_VARIANT 8u -set _GTK_THEME_VARIANT dark
-}
+# GUI tools
+alias ge='outofterm gedit'
+alias nau='outofterm nautilus .'
+
+# Git
+alias gst='git status'
+
+# Yandex Disk
+alias yds='yandex-disk status'
+alias ydstart='yandex-disk start'
+
+# DNF aliases (based on Prezto module)
+alias dnfc='sudo dnf clean all'    # Cleans the cache.
+alias dnfh='sudo dnf history'      # Displays history.
+alias dnfi='sudo dnf install'      # Installs package(s).
+alias dnfl='dnf list'              # Lists packages.
+alias dnfL='dnf list installed'    # Lists installed packages.
+alias dnfq='dnf info'              # Displays package information.
+alias dnfr='sudo dnf remove'       # Removes package(s).
+alias dnfs='dnf search'            # Searches for a package.
+alias dnfu='sudo dnf upgrade'      # Upgrades packages.
