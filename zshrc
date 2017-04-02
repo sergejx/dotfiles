@@ -22,6 +22,10 @@ alias gst='git status'
 # Yandex Disk
 alias yds='yandex-disk status'
 alias ydstart='yandex-disk start'
+alias ydp='yandex-disk publish'
+
+# Misc
+alias servethis='python3 -m http.server 8000'
 
 # DNF aliases (based on Prezto module)
 alias dnfc='sudo dnf clean all'    # Cleans the cache.
