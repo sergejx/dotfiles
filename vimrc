@@ -108,7 +108,6 @@ let g:airline#extensions#whitespace#enabled = 0
 set noshowmode                  " No need for default mode indicator
 
 if has("gui_running")
-    set background=light    " Light colors in GUI
     set guifont=Fira\ Mono\ 10
     set guioptions-=T       " Disable toolbar
     set guioptions-=m       " Disable menu
@@ -116,4 +115,6 @@ if has("gui_running")
     set guioptions-=L       " Disable left scrollbar
     set lines=42            " Make default window taller
     set columns=84          " and wider
+    " Set dark window title
+    autocmd GUIEnter * silent execute '!xprop -f _GTK_THEME_VARIANT 8u -set _GTK_THEME_VARIANT "dark" -id' v:windowid
 endif
