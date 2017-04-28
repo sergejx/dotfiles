@@ -19,13 +19,15 @@ alias nau='outofterm nautilus .'
 # Git
 alias gst='git status'
 
+# Activate virtual environment in current directory
+alias venv='source venv/bin/activate && export PS1="%F{250}(${PWD:t}) $_OLD_VIRTUAL_PS1"'
+# Local server for static pages
+alias servethis='python3 -m http.server 8000'
+
 # Yandex Disk
 alias yds='yandex-disk status'
 alias ydstart='yandex-disk start'
 alias ydp='yandex-disk publish'
-
-# Misc
-alias servethis='python3 -m http.server 8000'
 
 # DNF aliases (based on Prezto module)
 alias dnfc='sudo dnf clean all'    # Cleans the cache.
