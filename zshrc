@@ -20,7 +20,7 @@ alias nau='outofterm nautilus .'
 alias gst='git status'
 
 # Activate virtual environment in current directory
-alias venv='source venv/bin/activate && export PS1="%F{250}(${PWD:t}) $_OLD_VIRTUAL_PS1"'
+alias venv='source venv/bin/activate'
 # Local server for static pages
 alias servethis='python3 -m http.server 8000'
 
