@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/zsh
 
 dotfiles=('gitconfig' 'vim' 'vimrc' 'zimrc' 'zlogin' 'zshenv' 'zshrc')
 dotfiles_dir="$HOME/Code/dotfiles"
