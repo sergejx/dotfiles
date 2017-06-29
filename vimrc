@@ -99,7 +99,9 @@ set wildignore+=node_modules,bower_components
 
 " User Interface ============================================================
 set visualbell                  " Don't beep
-set termguicolors               " Use full color palette even in terminal
+if (has("termguicolors"))
+    set termguicolors           " Use full color palette even in terminal
+endif
 set background=dark             " Dark theme for terminal
 let g:one_allow_italics=1
 colorscheme one
