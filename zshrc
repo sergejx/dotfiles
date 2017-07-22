@@ -16,11 +16,9 @@ function outofterm () {
 alias ge='outofterm gedit'
 alias nau='outofterm nautilus .'
 
-# Git
-alias gst='git status'
+# Docker
+alias dkc='docker-compose'
 
-# Activate virtual environment in current directory
-alias venv='source venv/bin/activate'
 # Local server for static pages
 alias servethis='python3 -m http.server 8000'
 
