@@ -5,19 +5,16 @@ call plug#begin()
     Plug 'tpope/vim-repeat'
     Plug 'tpope/vim-surround'
     Plug 'tpope/vim-unimpaired'
-    Plug 'SirVer/ultisnips'
     Plug 'editorconfig/editorconfig-vim'
     " Utilities & tools
     Plug 'tpope/vim-eunuch'
-    Plug 'tpope/vim-vinegar'
     Plug 'tpope/vim-fugitive'
     Plug 'mbbill/undotree'
     Plug 'ctrlpvim/ctrlp.vim'
-    Plug 'mileszs/ack.vim'
-    Plug 'airblade/vim-gitgutter'
     " Look & feel
     Plug 'rakr/vim-one'
     Plug 'vim-airline/vim-airline'
+    Plug 'vim-airline/vim-airline-themes'
     " File types
     Plug 'lervag/vimtex'
     Plug 'django.vim'
@@ -99,12 +96,7 @@ set wildignore+=node_modules,bower_components
 
 " User Interface ============================================================
 set visualbell                  " Don't beep
-if (has("termguicolors"))
-    set termguicolors           " Use full color palette even in terminal
-endif
-set background=dark             " Dark theme for terminal
-let g:one_allow_italics=1
-colorscheme one
+set background=dark             " Dark theme
 " Vim Airline
 let g:airline#extensions#whitespace#enabled = 0
 set noshowmode                  " No need for default mode indicator
@@ -117,6 +109,9 @@ if has("gui_running")
     set guioptions-=L       " Disable left scrollbar
     set lines=42            " Make default window taller
     set columns=84          " and wider
+    colorscheme one
     " Set dark window title
     autocmd GUIEnter * silent execute '!xprop -f _GTK_THEME_VARIANT 8u -set _GTK_THEME_VARIANT "dark" -id' v:windowid
+else
+    let g:airline_theme="simple"
 endif
