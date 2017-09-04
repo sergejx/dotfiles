@@ -8,16 +8,12 @@ call plug#begin()
     Plug 'editorconfig/editorconfig-vim'
     " Utilities & tools
     Plug 'tpope/vim-eunuch'
-    Plug 'tpope/vim-fugitive'
-    Plug 'mbbill/undotree'
-    Plug 'ctrlpvim/ctrlp.vim'
     " Look & feel
     Plug 'rakr/vim-one'
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
     " File types
-    Plug 'lervag/vimtex'
-    Plug 'django.vim'
+    Plug 'vim-scripts/django.vim'
     Plug 'ap/vim-css-color'
     Plug 'groenewege/vim-less'
     Plug 'evanmiller/nginx-vim-syntax'
@@ -53,17 +49,11 @@ noremap j gj
 " Paste from X clipboard
 noremap  <S-Ins> "+p
 inoremap <S-Ins> <C-r>+
-" Ultisnip jump to placeholder using <tab>
-let g:UltiSnipsJumpForwardTrigger="<tab>"
-" CtrlP in MRU mode
-nnoremap <C-N> :CtrlPMRU<CR>
 " List spelling suggestion for slovak layout
 nnoremap z- z=
 " Switch spell language
 nnoremap <F2> :set spelllang=sk<cr>
 nnoremap <C-F2> :set spelllang=en<cr>
-" Gundo
-nnoremap <F5> :UndotreeToggle<CR>
 " Make
 nnoremap <F8> :make<CR>
 " Open terminal
@@ -109,9 +99,8 @@ if has("gui_running")
     set guioptions-=L       " Disable left scrollbar
     set lines=42            " Make default window taller
     set columns=84          " and wider
+    set background=light
     colorscheme one
-    " Set dark window title
-    autocmd GUIEnter * silent execute '!xprop -f _GTK_THEME_VARIANT 8u -set _GTK_THEME_VARIANT "dark" -id' v:windowid
 else
     let g:airline_theme="simple"
 endif
