@@ -1,0 +1,103 @@
+"*":
+  "atom-beautify":
+    general:
+      _analyticsUserId: "6c76b40e-a881-4b14-aa78-31401c1ca37c"
+  "autocomplete-python":
+    pythonPaths: "/home/sergej/.virtualenvs/$PROJECT_NAME/bin/python;/usr/bin/python3"
+    useKite: false
+  core:
+    openEmptyEditorOnStart: false
+    packagesWithKeymapsDisabled: [
+      "updater-notify"
+    ]
+    projectHome: "/home/sergej/Code"
+    telemetryConsent: "limited"
+    themes: [
+      "one-light-ui"
+      "piatto-light-syntax"
+    ]
+  "django-templates":
+    defaultToDjangoTemplatesForFilePathsContaining: [
+      "templates"
+    ]
+  editor:
+    atomicSoftTabs: false
+    fontFamily: "Fira Code"
+    invisibles: {}
+    scrollPastEnd: true
+    softWrap: true
+    tabLength: 4
+  "exception-reporting":
+    userId: "6bd9eac5-fb33-596d-8947-bd2c2321b109"
+  "file-icons": {}
+  latex:
+    buildOnSave: true
+    opener: "evince"
+    outputDirectory: "_tex"
+  linter: {}
+  "linter-ui-default":
+    hidePanelWhenEmpty: false
+    panelHeight: 69
+    showStatusBar: false
+    tooltipFollows: "Mouse"
+    useBusySignal: false
+  "one-dark-ui": {}
+  "one-light-ui": {}
+  "open-terminal-here":
+    command: "gnome-terminal"
+  "package-sync":
+    createOnChange: true
+    forceOverwrite: true
+  pigments:
+    notifyReloads: false
+  "project-plus":
+    notifications: false
+    showPath: true
+  "spell-check":
+    grammars: [
+      "source.asciidoc"
+      "source.gfm"
+      "text.git-commit"
+      "text.plain"
+      "text.plain.null-grammar"
+      "text.tex.latex"
+      "text.xml"
+      "text.html.basic"
+    ]
+    knownWords: [
+      "Chodarev"
+      "metamodel"
+    ]
+    localePaths: [
+      "/usr/share/myspell/"
+    ]
+    locales: [
+      "en-US"
+      "sk-SK"
+    ]
+  "tree-view":
+    hideIgnoredNames: true
+  "updater-notify":
+    pkgType: "RedHat"
+  welcome:
+    showOnStartup: false
+  whitespace:
+    removeTrailingWhitespace: false
+".beamer.latex.tex.text":
+  editor:
+    tabLength: 2
+".bibtex.text":
+  editor:
+    tabLength: 2
+".gohtml.html.text":
+  editor:
+    tabLength: 2
+".html.liquid.text":
+  editor:
+    tabLength: 2
+".latex.memoir.tex.text":
+  editor:
+    tabLength: 2
+".latex.tex.text":
+  editor:
+    tabLength: 2
