@@ -10,6 +10,6 @@ atom.commands.add 'atom-text-editor', 'insert-date', ->
     {BufferedProcess} = require 'atom'
     process = new BufferedProcess {
         command: 'date'
-        args: ['+%A, %-d. %B %Y']
+        args: ['+%A %-d. %B %Y']
         stdout: (output) => editor.insertText(output)
     }
