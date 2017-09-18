@@ -15,7 +15,6 @@ packages: [
   "language-latex"
   "language-nginx"
   "latex"
-  "latexer"
   "markdown-commander"
   "one-dark-vivid-syntax"
   "open-in-browser"

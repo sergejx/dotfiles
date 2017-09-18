@@ -9,6 +9,7 @@
     openEmptyEditorOnStart: false
     packagesWithKeymapsDisabled: [
       "updater-notify"
+      "atom-beautify"
     ]
     projectHome: "/home/sergej/Code"
     telemetryConsent: "limited"
@@ -32,15 +33,9 @@
   "file-icons": {}
   latex:
     buildOnSave: true
+    enableExtendedBuildMode: false
     opener: "evince"
     outputDirectory: "_tex"
-  linter: {}
-  "linter-ui-default":
-    hidePanelWhenEmpty: false
-    panelHeight: 69
-    showStatusBar: false
-    tooltipFollows: "Mouse"
-    useBusySignal: false
   "one-dark-ui": {}
   "one-light-ui": {}
   "open-terminal-here":
