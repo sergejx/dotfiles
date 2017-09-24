@@ -86,7 +86,7 @@ set wildignore+=node_modules,bower_components
 
 " User Interface ============================================================
 set visualbell                  " Don't beep
-set background=dark             " Dark theme
+set background=light            " Light theme
 " Vim Airline
 let g:airline#extensions#whitespace#enabled = 0
 set noshowmode                  " No need for default mode indicator
@@ -99,8 +99,7 @@ if has("gui_running")
     set guioptions-=L       " Disable left scrollbar
     set lines=42            " Make default window taller
     set columns=84          " and wider
-    set background=light
     colorscheme one
 else
-    let g:airline_theme="simple"
+    let g:airline_theme="light"
 endif
