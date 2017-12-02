@@ -1,6 +1,10 @@
 packages: [
   "atom-beautify"
   "atom-jinja2"
+  "better-git-blame"
+  "build"
+  "build-make"
+  "busy-signal"
   "clipboard-history"
   "color-picker"
   "django-templates"
@@ -11,6 +15,7 @@ packages: [
   "highlight-selected"
   "language-apache"
   "language-docker"
+  "language-haskell"
   "language-ini"
   "language-latex"
   "language-nginx"
@@ -25,5 +30,5 @@ packages: [
   "project-plus"
   "sort-lines"
   "toggle-quotes"
-  "updater-notify"
+  "up2date"
 ]
