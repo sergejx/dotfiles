@@ -8,8 +8,15 @@ call plug#begin()
     Plug 'editorconfig/editorconfig-vim'
     " Utilities & tools
     Plug 'tpope/vim-eunuch'
+    Plug 'tpope/vim-vinegar'
+    Plug 'ctrlpvim/ctrlp.vim'
+    Plug 'qpkorr/vim-bufkill'
+    Plug 'tpope/vim-fugitive'
+    Plug 'airblade/vim-gitgutter'
+    Plug 'mileszs/ack.vim'
     " Look & feel
     Plug 'rakr/vim-one'
+    Plug 'nanotech/jellybeans.vim'
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
     " File types
@@ -54,10 +61,18 @@ nnoremap z- z=
 " Switch spell language
 nnoremap <F2> :set spelllang=sk<cr>
 nnoremap <C-F2> :set spelllang=en<cr>
+" CtrlP
+nnoremap ; :CtrlPBuffer<cr>
+" Bufkill
+nnoremap <esc>w :BD<cr>
 " Make
 nnoremap <F8> :make<CR>
 " Open terminal
 nnoremap <silent> <F12> :call system("gnome-terminal &")<CR>
+" Ag
+if executable('ag')
+  let g:ackprg = 'ag --vimgrep'
+endif
 
 " Slovak keyboard support
 set langmap=ú[ä]
@@ -86,10 +101,18 @@ set wildignore+=node_modules,bower_components
 
 " User Interface ============================================================
 set visualbell                  " Don't beep
-set background=light            " Light theme
+" set background=light            " Light theme
+set background=dark
+colorscheme jellybeans
 " Vim Airline
 let g:airline#extensions#whitespace#enabled = 0
 set noshowmode                  " No need for default mode indicator
+
+" GitGutter styling to use · instead of +/-
+let g:gitgutter_sign_added = '∙'
+let g:gitgutter_sign_modified = '∙'
+let g:gitgutter_sign_removed = '∙'
+let g:gitgutter_sign_modified_removed = '∙'
 
 if has("gui_running")
     set guifont=Fira\ Mono\ 10
@@ -101,5 +124,8 @@ if has("gui_running")
     set columns=84          " and wider
     colorscheme one
 else
-    let g:airline_theme="light"
+    if (has("termguicolors"))
+        set termguicolors
+    endif
+    " let g:airline_theme="light"
 endif
