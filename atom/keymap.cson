@@ -2,3 +2,4 @@
     'ctrl-alt-1': 'window-size:narrow'
     'ctrl-alt-2': 'window-size:medium'
     'ctrl-alt-3': 'window-size:wide'
+    'ctrl-alt-n': 'atom-notes:toggle'
