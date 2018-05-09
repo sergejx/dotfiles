@@ -15,10 +15,11 @@
       "atom-beautify"
     ]
     projectHome: "/home/sergej/Code"
+    restorePreviousWindowsOnStart: "no"
     telemetryConsent: "limited"
     themes: [
       "one-light-ui"
-      "piatto-light-syntax"
+      "one-light-syntax"
     ]
   "django-templates":
     defaultToDjangoTemplatesForFilePathsContaining: [
@@ -34,6 +35,8 @@
   "exception-reporting":
     userId: "6bd9eac5-fb33-596d-8947-bd2c2321b109"
   "file-icons": {}
+  "gtk-dark-theme":
+    enabled: false
   latex:
     buildOnSave: true
     enableExtendedBuildMode: false
