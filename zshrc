@@ -7,6 +7,8 @@ if [[ -s ${ZDOTDIR:-${HOME}}/.zim/init.zsh ]]; then
   source ${ZDOTDIR:-${HOME}}/.zim/init.zsh
 fi
 
+autoload -U zmv
+
 # Aliases and functions
 function outofterm () {
     $@ >/dev/null 2>&1 &!
