@@ -3,3 +3,7 @@
     'ctrl-alt-2': 'window-size:medium'
     'ctrl-alt-3': 'window-size:wide'
     'ctrl-alt-n': 'atom-notes:toggle'
+
+'.platform-linux atom-text-editor':
+  'ctrl-alt-t': 'unset!'
+  'ctrl-alt-shift-t': 'open-terminal-here:open-root'
