@@ -33,7 +33,6 @@ packages: [
   "piatto-light-syntax"
   "pigments"
   "project-plus"
-  "railscast-theme"
   "sort-lines"
   "toggle-quotes"
 ]
