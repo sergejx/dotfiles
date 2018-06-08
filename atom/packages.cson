@@ -1,5 +1,6 @@
 packages: [
   "atom-beautify"
+  "atom-ide-ui"
   "atom-jinja2"
   "atom-notes"
   "autocomplete-paths"
@@ -16,6 +17,7 @@ packages: [
   "file-icons"
   "gtk-dark-theme"
   "highlight-selected"
+  "ide-php"
   "language-apache"
   "language-docker"
   "language-haskell"
