@@ -11,7 +11,6 @@
     autoHideMenuBar: true
     openEmptyEditorOnStart: false
     packagesWithKeymapsDisabled: [
-      "updater-notify"
       "atom-beautify"
     ]
     projectHome: "/home/sergej/Code"
@@ -19,15 +18,16 @@
     telemetryConsent: "limited"
     themes: [
       "one-light-ui"
-      "piatto-light-syntax"
+      "one-light-syntax"
     ]
+    useTreeSitterParsers: true
   "django-templates":
     defaultToDjangoTemplatesForFilePathsContaining: [
       "templates"
     ]
   editor:
     atomicSoftTabs: false
-    fontFamily: "Fira Code"
+    fontFamily: "Fira Mono"
     invisibles: {}
     scrollPastEnd: true
     softWrap: true
