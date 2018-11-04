@@ -28,6 +28,7 @@
   editor:
     atomicSoftTabs: false
     fontFamily: "Fira Mono"
+    fontSize: 13
     invisibles: {}
     scrollPastEnd: true
     softWrap: true
