@@ -9,9 +9,9 @@
     useKite: false
   core:
     autoHideMenuBar: true
-    openEmptyEditorOnStart: false
     packagesWithKeymapsDisabled: [
       "atom-beautify"
+      "split-diff"
     ]
     projectHome: "/home/sergej/Code"
     restorePreviousWindowsOnStart: "no"
@@ -41,7 +41,6 @@
     buildOnSave: true
     enableExtendedBuildMode: false
     opener: "evince"
-    outputDirectory: "_tex"
   "one-dark-ui": {}
   "one-light-ui": {}
   "open-terminal-here":
@@ -76,6 +75,8 @@
       "en-US"
       "sk-SK"
     ]
+  "split-diff":
+    colors: {}
   "tree-view":
     hideIgnoredNames: true
   "updater-notify":
