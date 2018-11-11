@@ -7,6 +7,8 @@
   "autocomplete-python":
     pythonPaths: "/home/sergej/.virtualenvs/$PROJECT_NAME/bin/python;/usr/bin/python3"
     useKite: false
+  "better-git-blame":
+    searchInLayerEnabled: false
   core:
     autoHideMenuBar: true
     packagesWithKeymapsDisabled: [
