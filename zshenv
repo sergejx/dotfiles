@@ -7,3 +7,4 @@ export BROWSER=firefox
 export TERMINAL=gnome-terminal
 export PROJECT_HOME=~/Code
 export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
+export ELECTRON_TRASH=gio
