@@ -2,6 +2,9 @@
   "atom-beautify":
     general:
       _analyticsUserId: "6c76b40e-a881-4b14-aa78-31401c1ca37c"
+  "atom-ide-ui":
+    use:
+      "atom-ide-debugger": "never"
   "atom-notes":
     directory: "/home/sergej/Dropbox/notes"
   "autocomplete-python":
