@@ -2,6 +2,8 @@
   "atom-beautify":
     general:
       _analyticsUserId: "6c76b40e-a881-4b14-aa78-31401c1ca37c"
+    html:
+      indent_size: 2
   "atom-ide-ui":
     use:
       "atom-ide-debugger": "never"
@@ -14,6 +16,10 @@
     searchInLayerEnabled: false
   core:
     autoHideMenuBar: true
+    disabledPackages: [
+      "language-gfm"
+      "latex"
+    ]
     packagesWithKeymapsDisabled: [
       "atom-beautify"
       "split-diff"
@@ -26,6 +32,9 @@
       "one-dark-vivid-syntax"
     ]
     useTreeSitterParsers: true
+  dicy:
+    open:
+      opener: "evince"
   "django-templates":
     defaultToDjangoTemplatesForFilePathsContaining: [
       "templates"
