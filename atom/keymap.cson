@@ -3,6 +3,7 @@
     'ctrl-alt-2': 'window-size:medium'
     'ctrl-alt-3': 'window-size:wide'
     'ctrl-alt-n': 'atom-notes:toggle'
+    'f12': 'me:switch-color-theme'
 
 '.platform-linux atom-text-editor':
   'ctrl-alt-t': 'unset!'
