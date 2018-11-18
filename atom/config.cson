@@ -95,6 +95,8 @@
     hideIgnoredNames: true
   "updater-notify":
     pkgType: "RedHat"
+  "vim-mode-plus":
+    statusBarModeStringStyle: "long"
   welcome:
     showOnStartup: false
   whitespace:
