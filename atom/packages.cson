@@ -15,7 +15,6 @@ packages: [
   "dockerletion"
   "editorconfig"
   "emmet"
-  "ex-mode"
   "escape-utils"
   "file-icons"
   "gtk-dark-theme"
@@ -42,6 +41,4 @@ packages: [
   "sort-lines"
   "split-diff"
   "toggle-quotes"
-  "vim-mode-plus"
-  "vim-mode-plus-keymaps-for-surround"
 ]
