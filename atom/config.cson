@@ -71,6 +71,7 @@
     grammars: [
       "source.asciidoc"
       "source.gfm"
+      "text.md"
       "text.git-commit"
       "text.plain"
       "text.plain.null-grammar"
