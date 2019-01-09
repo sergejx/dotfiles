@@ -1,28 +1,26 @@
 "*":
   "atom-beautify":
+    c:
+      default_beautifier: "clang-format"
+    cpp:
+      default_beautifier: "clang-format"
     general:
       _analyticsUserId: "6c76b40e-a881-4b14-aa78-31401c1ca37c"
     html:
       indent_size: 2
-  "atom-ide-ui":
-    use:
-      "atom-ide-debugger": "never"
   "atom-notes":
     directory: "/home/sergej/Dropbox/notes"
   "autocomplete-python":
     pythonPaths: "/home/sergej/.virtualenvs/$PROJECT_NAME/bin/python;/usr/bin/python3"
     useKite: false
-  "better-git-blame":
-    searchInLayerEnabled: false
   core:
     autoHideMenuBar: true
     disabledPackages: [
       "language-gfm"
-      "latex"
+      "toggle-quotes"
     ]
     packagesWithKeymapsDisabled: [
       "atom-beautify"
-      "split-diff"
     ]
     projectHome: "/home/sergej/Code"
     restorePreviousWindowsOnStart: "no"
@@ -32,9 +30,6 @@
       "one-dark-vivid-syntax"
     ]
     useTreeSitterParsers: true
-  dicy:
-    open:
-      opener: "evince"
   "django-templates":
     defaultToDjangoTemplatesForFilePathsContaining: [
       "templates"
@@ -54,7 +49,9 @@
   latex:
     buildOnSave: true
     enableExtendedBuildMode: false
+    openResultInBackground: false
     opener: "evince"
+    outputDirectory: "_tex"
   "one-dark-ui": {}
   "one-light-ui": {}
   "open-terminal-here":
