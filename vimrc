@@ -23,7 +23,6 @@ call plug#begin()
     Plug 'vim-scripts/django.vim'
     Plug 'ap/vim-css-color'
     Plug 'groenewege/vim-less'
-    Plug 'evanmiller/nginx-vim-syntax'
 call plug#end()
 " ===========================================================================
 
@@ -101,9 +100,11 @@ set wildignore+=node_modules,bower_components
 
 " User Interface ============================================================
 set visualbell                  " Don't beep
-" set background=light            " Light theme
-set background=dark
-colorscheme jellybeans
+if (has("termguicolors"))
+    set termguicolors
+endif
+set background=light            " Light theme
+colorscheme one
 " Vim Airline
 let g:airline#extensions#whitespace#enabled = 0
 set noshowmode                  " No need for default mode indicator
@@ -123,9 +124,4 @@ if has("gui_running")
     set lines=42            " Make default window taller
     set columns=84          " and wider
     colorscheme one
-else
-    if (has("termguicolors"))
-        set termguicolors
-    endif
-    " let g:airline_theme="light"
 endif
