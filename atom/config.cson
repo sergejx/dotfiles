@@ -17,10 +17,10 @@
     autoHideMenuBar: true
     disabledPackages: [
       "language-gfm"
-      "toggle-quotes"
     ]
     packagesWithKeymapsDisabled: [
       "atom-beautify"
+      "open-terminal-here"
     ]
     projectHome: "/home/sergej/Code"
     restorePreviousWindowsOnStart: "no"
@@ -46,6 +46,8 @@
     userId: "6bd9eac5-fb33-596d-8947-bd2c2321b109"
   "file-icons": {}
   "gtk-dark-theme": {}
+  "highlight-selected":
+    showResultsOnScrollBar: true
   latex:
     buildOnSave: true
     enableExtendedBuildMode: false

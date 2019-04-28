@@ -5,6 +5,5 @@
     'ctrl-alt-n': 'atom-notes:toggle'
     'f12': 'me:switch-color-theme'
 
-'.platform-linux atom-text-editor':
-  'ctrl-alt-t': 'unset!'
-  'ctrl-alt-shift-t': 'open-terminal-here:open-root'
+'atom-workspace':
+    'ctrl-alt-t': 'open-terminal-here:open-root'
