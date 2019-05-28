@@ -21,15 +21,18 @@
     packagesWithKeymapsDisabled: [
       "atom-beautify"
       "open-terminal-here"
+      "split-diff"
     ]
     projectHome: "/home/sergej/Code"
     restorePreviousWindowsOnStart: "no"
     telemetryConsent: "limited"
     themes: [
-      "one-dark-ui"
-      "one-dark-vivid-syntax"
+      "one-light-ui"
+      "one-light-syntax"
     ]
     useTreeSitterParsers: true
+  date:
+    dateTimeFormat: "YYYY-MM-DDTHH:mm:ssZ"
   "django-templates":
     defaultToDjangoTemplatesForFilePathsContaining: [
       "templates"
@@ -45,7 +48,8 @@
   "exception-reporting":
     userId: "6bd9eac5-fb33-596d-8947-bd2c2321b109"
   "file-icons": {}
-  "gtk-dark-theme": {}
+  "gtk-dark-theme":
+    enabled: false
   "highlight-selected":
     showResultsOnScrollBar: true
   latex:

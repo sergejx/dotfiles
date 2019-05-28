@@ -7,3 +7,6 @@
 
 'atom-workspace':
     'ctrl-alt-t': 'open-terminal-here:open-root'
+
+'atom-text-editor:not([mini])':
+    'ctrl-shift-v': 'clipboard-plus:toggle'
