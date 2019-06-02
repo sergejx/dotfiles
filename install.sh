@@ -68,6 +68,7 @@ handle_file_ln "/home/sergej/.dotfiles/atom/init.coffee" "/home/sergej/.atom/ini
 handle_file_ln "/home/sergej/.dotfiles/atom/keymap.cson" "/home/sergej/.atom/keymap.cson"
 handle_file_ln "/home/sergej/.dotfiles/atom/packages.cson" "/home/sergej/.atom/packages.cson"
 handle_file_ln "/home/sergej/.dotfiles/atom/snippets.cson" "/home/sergej/.atom/snippets.cson"
+handle_file_ln "/home/sergej/.dotfiles/config/nvim/init.vim" "/home/sergej/.config/nvim/init.vim"
 handle_file_ln "/home/sergej/.dotfiles/gitconfig" "/home/sergej/.gitconfig"
 handle_file_ln "/home/sergej/.dotfiles/rcrc" "/home/sergej/.rcrc"
 handle_file_ln "/home/sergej/.dotfiles/vim/after/syntax/xml.vim" "/home/sergej/.vim/after/syntax/xml.vim"

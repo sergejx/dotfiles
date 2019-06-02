@@ -20,6 +20,8 @@ call plug#begin()
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
     " File types
+    Plug 'lervag/vimtex'
+    Plug 'peder2tm/sved'
     Plug 'vim-scripts/django.vim'
     Plug 'ap/vim-css-color'
     Plug 'groenewege/vim-less'
@@ -44,6 +46,10 @@ set spellsuggest=12 " 12 suggestions is enough
 set undofile        " Store undo history
 set undodir^=$HOME/.cache/vim//
 set directory^=$HOME/.cache/vim//
+" Set terminal title
+set title
+" Always show gutter
+set signcolumn=yes
 " Leader key
 let mapleader = ","
 let maplocalleader = ","
@@ -60,25 +66,39 @@ nnoremap z- z=
 " Switch spell language
 nnoremap <F2> :set spelllang=sk<cr>
 nnoremap <C-F2> :set spelllang=en<cr>
+" Disable highlighting
+nnoremap <F3> :nohlsearch<CR>
 " CtrlP
 nnoremap ; :CtrlPBuffer<cr>
 " Bufkill
 nnoremap <esc>w :BD<cr>
 " Make
 nnoremap <F8> :make<CR>
+" Close quickfix window
+nnoremap <F9> :cclose<CR>
 " Open terminal
 nnoremap <silent> <F12> :call system("gnome-terminal &")<CR>
+
+function! Evince_ForvardSearch()
+   let l:pycmd = expand('~/.vim/plugged/sved/ftplugin/evinceSync.py')
+   let l:cursorpos = getcurpos()
+   let l:command = shellescape(l:pycmd) . " " . shellescape(b:vimtex.out()) . " " .
+               \ l:cursorpos[1] . " " . l:cursorpos[2] . " " . shellescape(expand("%:p"))
+   let l:output = system(l:command)
+   echo l:output
+endfunction
+
+nnoremap <leader>lf :call Evince_ForvardSearch()<CR>
+
 " Ag
 if executable('ag')
   let g:ackprg = 'ag --vimgrep'
 endif
 
-" Slovak keyboard support
-set langmap=ú[ä]
+" Slovak and russian keyboard support
+set langmap=ľščťžýáíé;234567890,úä;[],юЮ;`~,ёЁъЪ;#$%^,чЧ;=+,яжертыуиопшщ;qwertyuiop[],асдфгхйкл;asdfghjkl,зьцвбнм;zxcvbnm
 map ú [
 map ä ]
-" Russian phonetic keyboard support
-set langmap=юЮ;`~,ёЁъЪ;#$%^,чЧ;=+,яжертыуиопшщ;qwertyuiop[],асдфгхйкл;asdfghjkl,зьцвбнм;zxcvbnm
 map ш [
 map щ ]
 
@@ -96,7 +116,7 @@ let g:tex_flavor = 'latex'
 " Ignored files
 set wildignore+=*.pyc,*.pyo,*.hi,*.o " Programming
 set wildignore+=*.aux,*.dvi,*.pdf,*.log,*.out,*.bbl,*.blg,*.fdb_latexmk,*.fls,*.synctex.gz " LaTeX
-set wildignore+=node_modules,bower_components
+set wildignore+=node_modules,output
 
 " User Interface ============================================================
 set visualbell                  " Don't beep
@@ -104,9 +124,17 @@ if (has("termguicolors"))
     set termguicolors
 endif
 set background=light            " Light theme
+let g:one_allow_italics=1
 colorscheme one
 " Vim Airline
 let g:airline#extensions#whitespace#enabled = 0
+let g:airline#parts#ffenc#skip_expected_string='utf-8[unix]'
+let g:airline#extensions#wordcount#enabled = 0
+if !exists('g:airline_symbols')
+    let g:airline_symbols = {}
+endif
+let g:airline_symbols.spell = '✓'
+let g:airline_symbols.maxlinenr = ''
 set noshowmode                  " No need for default mode indicator
 
 " GitGutter styling to use · instead of +/-
@@ -123,5 +151,6 @@ if has("gui_running")
     set guioptions-=L       " Disable left scrollbar
     set lines=42            " Make default window taller
     set columns=84          " and wider
-    colorscheme one
+    " Set dark window title
+    autocmd GUIEnter * silent execute '!xprop -f _GTK_THEME_VARIANT 8u -set _GTK_THEME_VARIANT "dark" -id' v:windowid
 endif
