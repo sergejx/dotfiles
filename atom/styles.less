@@ -1,23 +1,38 @@
+// Moke comments stand out =================================================
+
 @hue-4:   hsl(119, 34%, 47%); // <-green from the Atom One Light theme
 
 .syntax--comment,
 .syntax--punctuation.syntax--definition.syntax--comment,
 .syntax--comment .syntax--markup.syntax--link {
     color: @hue-4;
-    background-color: lighten(@hue-4, 49%);
+}
+.syntax--comment.syntax--block,
+.syntax--comment.syntax--line {
+    background-color: fade(@hue-4, 5%);
     padding-top: 2px;
     padding-bottom: 2px;
 }
 
+
+// Make Markdown headings larger ===========================================
+@medium: 500;
 .syntax--md.syntax--heading-1 {
-    font-size: 140%
+    font-weight: bold;
+    font-size: 130%;
+    line-height: 100/130;
 }
 .syntax--md.syntax--heading-2 {
-    font-size: 120%
+    font-weight: @medium;
+    font-size: 120%;
+    line-height: 100/120;
+}
+.syntax--md.syntax--heading-3 {
+    font-weight: @medium;
 }
 
 
-// Hide the GitHub statis-line badge
+// Hide the GitHub statis-line badge ========================================
 .github-StatusBarTile {
     display: none;
 }
