@@ -61,6 +61,9 @@
   "exception-reporting":
     userId: "6bd9eac5-fb33-596d-8947-bd2c2321b109"
   "file-icons": {}
+  "fuzzy-finder":
+    scoringSystem: "fast"
+    useRipGrep: true
   "gtk-dark-theme":
     enabled: false
   "highlight-selected":
@@ -71,6 +74,8 @@
     openResultInBackground: false
     opener: "evince"
     outputDirectory: "_tex"
+  "linter-ui-default":
+    showStatusBar: false
   "one-dark-ui": {}
   "one-light-ui": {}
   "open-terminal-here":
@@ -108,18 +113,13 @@
       "/usr/share/myspell/"
     ]
     locales: [
-      "en-US"
       "sk-SK"
-      "ru-RU"
+      "en-US"
     ]
   "split-diff":
     colors: {}
   "tree-view":
     hideIgnoredNames: true
-  "updater-notify":
-    pkgType: "RedHat"
-  "vim-mode-plus":
-    statusBarModeStringStyle: "long"
   welcome:
     showOnStartup: false
   whitespace:

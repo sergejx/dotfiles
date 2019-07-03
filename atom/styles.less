@@ -1,15 +1,15 @@
 // Moke comments stand out =================================================
 
-@hue-4:   hsl(119, 34%, 47%); // <-green from the Atom One Light theme
-
+@hue-3: hsl(301, 63%, 55%); // <-purple (slightly lighter compared to One)
 .syntax--comment,
 .syntax--punctuation.syntax--definition.syntax--comment,
 .syntax--comment .syntax--markup.syntax--link {
-    color: @hue-4;
+    color: @hue-3;
 }
 .syntax--comment.syntax--block,
-.syntax--comment.syntax--line {
-    background-color: fade(@hue-4, 5%);
+.syntax--comment.syntax--line,
+.syntax--comment.syntax--md {
+    background-color: fade(@hue-3, 5%);
     padding-top: 2px;
     padding-bottom: 2px;
 }
