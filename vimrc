@@ -9,17 +9,18 @@ call plug#begin()
     " Utilities & tools
     Plug 'tpope/vim-eunuch'
     Plug 'tpope/vim-vinegar'
-    Plug 'ctrlpvim/ctrlp.vim'
+    Plug 'junegunn/fzf.vim'
     Plug 'qpkorr/vim-bufkill'
     Plug 'tpope/vim-fugitive'
     Plug 'airblade/vim-gitgutter'
     Plug 'mileszs/ack.vim'
     " Look & feel
     Plug 'rakr/vim-one'
-    Plug 'nanotech/jellybeans.vim'
+    Plug 'cormacrelf/vim-colors-github'
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
     " File types
+    Plug 'plasticboy/vim-markdown'
     Plug 'lervag/vimtex'
     Plug 'peder2tm/sved'
     Plug 'vim-scripts/django.vim'
@@ -69,7 +70,7 @@ nnoremap <C-F2> :set spelllang=en<cr>
 " Disable highlighting
 nnoremap <F3> :nohlsearch<CR>
 " CtrlP
-nnoremap ; :CtrlPBuffer<cr>
+nnoremap ; :Buffers<cr>
 " Bufkill
 nnoremap <esc>w :BD<cr>
 " Make
@@ -78,6 +79,11 @@ nnoremap <F8> :make<CR>
 nnoremap <F9> :cclose<CR>
 " Open terminal
 nnoremap <silent> <F12> :call system("gnome-terminal &")<CR>
+
+" FZF
+nmap <Leader>f :GFiles<CR>
+nmap <Leader>F :Files<CR>
+nmap <Leader>h :History<CR>
 
 function! Evince_ForvardSearch()
    let l:pycmd = expand('~/.vim/plugged/sved/ftplugin/evinceSync.py')
@@ -96,9 +102,10 @@ if executable('ag')
 endif
 
 " Slovak and russian keyboard support
-set langmap=ľščťžýáíé;234567890,úä;[],юЮ;`~,ёЁъЪ;#$%^,чЧ;=+,яжертыуиопшщ;qwertyuiop[],асдфгхйкл;asdfghjkl,зьцвбнм;zxcvbnm
-map ú [
-map ä ]
+" set langmap=ľščťžýáíé;234567890,úä;[],юЮ;`~,ёЁъЪ;#$%^,чЧ;=+,яжертыуиопшщ;qwertyuiop[],асдфгхйкл;asdfghjkl,зьцвбнм;zxcvbnm
+set langmap=юЮ;`~,ёЁъЪ;#$%^,чЧ;=+,яжертыуиопшщ;qwertyuiop[],ЯЖЕРТЫУИОПШЩ;QWERTYUIOP{},асдфгхйкл;asdfghjkl,АСДФГХЙКЛ;ASDFGHJKL,зьцвбнм;zxcvbnm,ЗЬЦВБНМ;ZXCVBNM
+" map ú [
+" map ä ]
 map ш [
 map щ ]
 
@@ -113,10 +120,13 @@ let python_highlight_all = 1
 au FileType tex setlocal shiftwidth=2 spell
 let g:tex_flavor = 'latex'
 
+" Markdown
+let g:vim_markdown_frontmatter = 1
+let g:vim_markdown_folding_disabled = 1
+
 " Ignored files
 set wildignore+=*.pyc,*.pyo,*.hi,*.o " Programming
 set wildignore+=*.aux,*.dvi,*.pdf,*.log,*.out,*.bbl,*.blg,*.fdb_latexmk,*.fls,*.synctex.gz " LaTeX
-set wildignore+=node_modules,output
 
 " User Interface ============================================================
 set visualbell                  " Don't beep
@@ -125,7 +135,10 @@ if (has("termguicolors"))
 endif
 set background=light            " Light theme
 let g:one_allow_italics=1
-colorscheme one
+colorscheme github
+" Netrw
+let g:netrw_liststyle=3
+let g:netrw_fastbrowse=0
 " Vim Airline
 let g:airline#extensions#whitespace#enabled = 0
 let g:airline#parts#ffenc#skip_expected_string='utf-8[unix]'
