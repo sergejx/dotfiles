@@ -14,6 +14,7 @@ call plug#begin()
     Plug 'tpope/vim-fugitive'
     Plug 'airblade/vim-gitgutter'
     Plug 'mileszs/ack.vim'
+    Plug 'junegunn/vim-peekaboo'
     " Look & feel
     Plug 'rakr/vim-one'
     Plug 'cormacrelf/vim-colors-github'
@@ -62,8 +63,6 @@ noremap j gj
 " Paste from X clipboard
 noremap  <S-Ins> "+p
 inoremap <S-Ins> <C-r>+
-" List spelling suggestion for slovak layout
-nnoremap z- z=
 " Switch spell language
 nnoremap <F2> :set spelllang=sk<cr>
 nnoremap <C-F2> :set spelllang=en<cr>
@@ -104,8 +103,8 @@ endif
 " Slovak and russian keyboard support
 " set langmap=ľščťžýáíé;234567890,úä;[],юЮ;`~,ёЁъЪ;#$%^,чЧ;=+,яжертыуиопшщ;qwertyuiop[],асдфгхйкл;asdfghjkl,зьцвбнм;zxcvbnm
 set langmap=юЮ;`~,ёЁъЪ;#$%^,чЧ;=+,яжертыуиопшщ;qwertyuiop[],ЯЖЕРТЫУИОПШЩ;QWERTYUIOP{},асдфгхйкл;asdfghjkl,АСДФГХЙКЛ;ASDFGHJKL,зьцвбнм;zxcvbnm,ЗЬЦВБНМ;ZXCVBNM
-" map ú [
-" map ä ]
+map ú [
+map ä ]
 map ш [
 map щ ]
 
@@ -135,6 +134,7 @@ if (has("termguicolors"))
 endif
 set background=light            " Light theme
 let g:one_allow_italics=1
+let g:github_colors_block_diffmark=1
 colorscheme github
 " Netrw
 let g:netrw_liststyle=3
@@ -143,27 +143,11 @@ let g:netrw_fastbrowse=0
 let g:airline#extensions#whitespace#enabled = 0
 let g:airline#parts#ffenc#skip_expected_string='utf-8[unix]'
 let g:airline#extensions#wordcount#enabled = 0
+let g:airline#extensions#branch#enabled = 0
 if !exists('g:airline_symbols')
     let g:airline_symbols = {}
 endif
 let g:airline_symbols.spell = '✓'
 let g:airline_symbols.maxlinenr = ''
+let g:airline_symbols.branch = '⎇'
 set noshowmode                  " No need for default mode indicator
-
-" GitGutter styling to use · instead of +/-
-let g:gitgutter_sign_added = '∙'
-let g:gitgutter_sign_modified = '∙'
-let g:gitgutter_sign_removed = '∙'
-let g:gitgutter_sign_modified_removed = '∙'
-
-if has("gui_running")
-    set guifont=Fira\ Mono\ 10
-    set guioptions-=T       " Disable toolbar
-    set guioptions-=m       " Disable menu
-    set guioptions-=r       " Disable right scrollbar
-    set guioptions-=L       " Disable left scrollbar
-    set lines=42            " Make default window taller
-    set columns=84          " and wider
-    " Set dark window title
-    autocmd GUIEnter * silent execute '!xprop -f _GTK_THEME_VARIANT 8u -set _GTK_THEME_VARIANT "dark" -id' v:windowid
-endif
