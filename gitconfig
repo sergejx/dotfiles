@@ -7,3 +7,5 @@
 	ui = auto
 [diff]
 	tool = meld
+[pull]
+	ff = only
