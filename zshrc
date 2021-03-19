@@ -61,7 +61,7 @@ zstyle ':prompt:pure:git:dirty' color 175
 #
 
 # Append `../` to your input for each `.` you type after an initial `..`
-#zstyle ':zim:input' double-dot-expand yes
+zstyle ':zim:input' double-dot-expand yes
 
 #
 # termtitle
