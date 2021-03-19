@@ -5,7 +5,11 @@ call plug#begin()
     Plug 'tpope/vim-repeat'
     Plug 'tpope/vim-surround'
     Plug 'tpope/vim-unimpaired'
+    Plug 'SirVer/ultisnips'
+    Plug 'honza/vim-snippets'
     Plug 'editorconfig/editorconfig-vim'
+    Plug 'dkarter/bullets.vim'
+    Plug 'godlygeek/tabular'
     " Utilities & tools
     Plug 'tpope/vim-eunuch'
     Plug 'tpope/vim-vinegar'
@@ -16,8 +20,8 @@ call plug#begin()
     Plug 'mileszs/ack.vim'
     Plug 'junegunn/vim-peekaboo'
     " Look & feel
-    Plug 'rakr/vim-one'
     Plug 'cormacrelf/vim-colors-github'
+    Plug 'jsit/toast.vim'
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
     " File types
@@ -25,8 +29,10 @@ call plug#begin()
     Plug 'lervag/vimtex'
     Plug 'peder2tm/sved'
     Plug 'vim-scripts/django.vim'
+    Plug 'lepture/vim-jinja'
     Plug 'ap/vim-css-color'
-    Plug 'groenewege/vim-less'
+    Plug 'robertbasic/vim-hugo-helper'
+    Plug 'fatih/vim-go'
 call plug#end()
 " ===========================================================================
 
@@ -34,7 +40,6 @@ call plug#end()
 set hidden          " Allow hidden buffers
 set linebreak       " Visually wrap lines
 set breakindent     " and repeat indentation level
-set conceallevel=2  " Hide or replace concealed text
 set smartcase       " Smart case for search
 set gdefault        " and 'g' by default
 " Tabs & indentation
@@ -79,6 +84,11 @@ nnoremap <F9> :cclose<CR>
 " Open terminal
 nnoremap <silent> <F12> :call system("gnome-terminal &")<CR>
 
+" Snippets
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<c-b>"
+
 " FZF
 nmap <Leader>f :GFiles<CR>
 nmap <Leader>F :Files<CR>
@@ -108,6 +118,13 @@ map ä ]
 map ш [
 map щ ]
 
+" Bullets.vim
+let g:bullets_enabled_file_types = [
+    \ 'markdown',
+    \ 'text',
+    \ 'gitcommit'
+    \]
+
 " Filetypes =================================================================
 " HTML & XML
 autocmd FileType html,xhtml,xml,xsl,htmldjango setlocal shiftwidth=2
@@ -133,13 +150,15 @@ if (has("termguicolors"))
     set termguicolors
 endif
 set background=light            " Light theme
-let g:one_allow_italics=1
 let g:github_colors_block_diffmark=1
-colorscheme github
+colorscheme toast
+highlight link mkdBlockquote Special
+set cursorline
 " Netrw
 let g:netrw_liststyle=3
 let g:netrw_fastbrowse=0
 " Vim Airline
+let g:airline_theme='silver'
 let g:airline#extensions#whitespace#enabled = 0
 let g:airline#parts#ffenc#skip_expected_string='utf-8[unix]'
 let g:airline#extensions#wordcount#enabled = 0
