@@ -135,6 +135,9 @@ function outofterm () {
     $@ >/dev/null 2>&1 &!
 }
 
+# Useful aliases
+alias open='xdg-open'
+
 # Neovim
 if [ -f /usr/bin/nvim ]; then
     alias vi='nvim'
