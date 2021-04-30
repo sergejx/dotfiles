@@ -21,9 +21,8 @@ call plug#begin()
     Plug 'junegunn/vim-peekaboo'
     " Look & feel
     Plug 'cormacrelf/vim-colors-github'
-    Plug 'jsit/toast.vim'
     Plug 'vim-airline/vim-airline'
-    Plug 'vim-airline/vim-airline-themes'
+    " Plug 'vim-airline/vim-airline-themes'
     " File types
     Plug 'plasticboy/vim-markdown'
     Plug 'lervag/vimtex'
@@ -33,6 +32,7 @@ call plug#begin()
     Plug 'ap/vim-css-color'
     Plug 'robertbasic/vim-hugo-helper'
     Plug 'fatih/vim-go'
+    Plug 'fladson/vim-kitty'
 call plug#end()
 " ===========================================================================
 
@@ -151,14 +151,13 @@ if (has("termguicolors"))
 endif
 set background=light            " Light theme
 let g:github_colors_block_diffmark=1
-colorscheme toast
+colorscheme github
 highlight link mkdBlockquote Special
 set cursorline
 " Netrw
 let g:netrw_liststyle=3
 let g:netrw_fastbrowse=0
 " Vim Airline
-let g:airline_theme='silver'
 let g:airline#extensions#whitespace#enabled = 0
 let g:airline#parts#ffenc#skip_expected_string='utf-8[unix]'
 let g:airline#extensions#wordcount#enabled = 0
@@ -168,5 +167,5 @@ if !exists('g:airline_symbols')
 endif
 let g:airline_symbols.spell = '✓'
 let g:airline_symbols.maxlinenr = ''
-let g:airline_symbols.branch = '⎇'
+" let g:airline_symbols.branch = '⎇'
 set noshowmode                  " No need for default mode indicator
