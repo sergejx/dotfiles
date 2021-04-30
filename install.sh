@@ -63,6 +63,8 @@ handle_file_ln() {
   $MKDIR -p "$($DIRNAME "$2")"
   $LN -sf "$1" "$2"
 }
+handle_file_ln "/home/sergej/.dotfiles/config/kitty/CLRS.conf" "/home/sergej/.config/kitty/CLRS.conf"
+handle_file_ln "/home/sergej/.dotfiles/config/kitty/kitty.conf" "/home/sergej/.config/kitty/kitty.conf"
 handle_file_ln "/home/sergej/.dotfiles/config/nvim/init.vim" "/home/sergej/.config/nvim/init.vim"
 handle_file_ln "/home/sergej/.dotfiles/gitconfig" "/home/sergej/.gitconfig"
 handle_file_ln "/home/sergej/.dotfiles/rcrc" "/home/sergej/.rcrc"
