@@ -9,3 +9,6 @@
 	tool = meld
 [pull]
 	ff = only
+[init]
+	defaultBranch = master
+
