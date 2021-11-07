@@ -5,16 +5,12 @@ call plug#begin()
     Plug 'tpope/vim-repeat'
     Plug 'tpope/vim-surround'
     Plug 'tpope/vim-unimpaired'
-    Plug 'SirVer/ultisnips'
-    Plug 'honza/vim-snippets'
     Plug 'editorconfig/editorconfig-vim'
-    Plug 'dkarter/bullets.vim'
-    Plug 'godlygeek/tabular'
     " Utilities & tools
     Plug 'tpope/vim-eunuch'
     Plug 'tpope/vim-vinegar'
-    Plug 'junegunn/fzf.vim'
-    Plug 'qpkorr/vim-bufkill'
+    Plug 'nvim-lua/plenary.nvim'
+    Plug 'nvim-telescope/telescope.nvim'
     Plug 'tpope/vim-fugitive'
     Plug 'airblade/vim-gitgutter'
     Plug 'mileszs/ack.vim'
@@ -22,7 +18,6 @@ call plug#begin()
     " Look & feel
     Plug 'cormacrelf/vim-colors-github'
     Plug 'vim-airline/vim-airline'
-    " Plug 'vim-airline/vim-airline-themes'
     " File types
     Plug 'plasticboy/vim-markdown'
     Plug 'lervag/vimtex'
@@ -30,9 +25,6 @@ call plug#begin()
     Plug 'vim-scripts/django.vim'
     Plug 'lepture/vim-jinja'
     Plug 'ap/vim-css-color'
-    Plug 'robertbasic/vim-hugo-helper'
-    Plug 'fatih/vim-go'
-    Plug 'fladson/vim-kitty'
 call plug#end()
 " ===========================================================================
 
@@ -73,26 +65,14 @@ nnoremap <F2> :set spelllang=sk<cr>
 nnoremap <C-F2> :set spelllang=en<cr>
 " Disable highlighting
 nnoremap <F3> :nohlsearch<CR>
-" CtrlP
-nnoremap ; :Buffers<cr>
-" Bufkill
-nnoremap <esc>w :BD<cr>
 " Make
 nnoremap <F8> :make<CR>
 " Close quickfix window
 nnoremap <F9> :cclose<CR>
-" Open terminal
-nnoremap <silent> <F12> :call system("gnome-terminal &")<CR>
 
-" Snippets
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<tab>"
-let g:UltiSnipsJumpBackwardTrigger="<c-b>"
-
-" FZF
-nmap <Leader>f :GFiles<CR>
-nmap <Leader>F :Files<CR>
-nmap <Leader>h :History<CR>
+" Telescope
+nmap <Leader>f <cmd>Telescope find_files<cr>
+nmap ; <cmd>Telescope buffers<cr>
 
 function! Evince_ForvardSearch()
    let l:pycmd = expand('~/.vim/plugged/sved/ftplugin/evinceSync.py')
@@ -128,6 +108,8 @@ let g:bullets_enabled_file_types = [
 " Filetypes =================================================================
 " HTML & XML
 autocmd FileType html,xhtml,xml,xsl,htmldjango setlocal shiftwidth=2
+" YAML
+autocmd FileType yaml setlocal shiftwidth=2
 " Makefiles
 autocmd FileType make setlocal noexpandtab
 " Python
