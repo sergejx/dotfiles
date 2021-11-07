@@ -4,7 +4,7 @@ fi
 
 export EDITOR=nvim
 export BROWSER=firefox
-export TERMINAL=kitty
+export TERMINAL=gnome-terminal
 export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
 export FZF_PREVIEW_COMMAND="highlight -O ansi {}"
 export FZF_DEFAULT_OPTS="--color bg+:7,fg+:-1"
