@@ -20,7 +20,7 @@ call plug#begin()
     Plug 'vim-airline/vim-airline'
     " File types
     Plug 'plasticboy/vim-markdown'
-    Plug 'lervag/vimtex'
+    Plug 'lervag/vimtex', {'for': 'tex'}
     Plug 'peder2tm/sved'
     Plug 'vim-scripts/django.vim'
     Plug 'lepture/vim-jinja'
@@ -106,6 +106,12 @@ let g:bullets_enabled_file_types = [
     \]
 
 " Filetypes =================================================================
+" Markdown
+let g:vim_markdown_folding_disabled = 1
+let g:vim_markdown_frontmatter = 1
+let g:vim_markdown_emphasis_multiline = 0
+let g:vim_markdown_fenced_languages = ['c++=cpp', 'viml=vim', 'bash=sh', 'ini=dosini', 'aspectj=aj']
+
 " HTML & XML
 autocmd FileType html,xhtml,xml,xsl,htmldjango setlocal shiftwidth=2
 " YAML
