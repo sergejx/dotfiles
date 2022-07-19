@@ -12,3 +12,5 @@
 [init]
 	defaultBranch = master
 
+[core]
+	autocrlf = input

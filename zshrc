@@ -169,10 +169,3 @@ alias dnfq='dnf info'              # Displays package information.
 alias dnfr='sudo dnf remove'       # Removes package(s).
 alias dnfs='dnf search'            # Searches for a package.
 alias dnfu='sudo dnf upgrade'      # Upgrades packages.
-
-# Kitty
-if [[ $TERM == "xterm-kitty" ]] && (( $+commands[kitty] )); then
-    kitty + complete setup zsh | source /dev/stdin
-    alias icat="kitty +kitten icat"
-    alias ssh="kitty +kitten ssh"
-fi
