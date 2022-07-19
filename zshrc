@@ -138,12 +138,6 @@ function outofterm () {
 # Useful aliases
 alias open='xdg-open'
 
-# Neovim
-if [ -f /usr/bin/nvim ]; then
-    alias vi='nvim'
-    alias vim='nvim'
-fi
-
 # GUI tools
 alias ge='outofterm gedit'
 alias nau='outofterm nautilus .'
