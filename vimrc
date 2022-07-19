@@ -9,12 +9,8 @@ call plug#begin()
     " Utilities & tools
     Plug 'tpope/vim-eunuch'
     Plug 'tpope/vim-vinegar'
-    Plug 'nvim-lua/plenary.nvim'
-    Plug 'nvim-telescope/telescope.nvim'
     Plug 'tpope/vim-fugitive'
     Plug 'airblade/vim-gitgutter'
-    Plug 'mileszs/ack.vim'
-    Plug 'junegunn/vim-peekaboo'
     " Look & feel
     Plug 'cormacrelf/vim-colors-github'
     Plug 'vim-airline/vim-airline'
@@ -22,7 +18,6 @@ call plug#begin()
     Plug 'plasticboy/vim-markdown'
     Plug 'lervag/vimtex', {'for': 'tex'}
     Plug 'peder2tm/sved'
-    Plug 'vim-scripts/django.vim'
     Plug 'lepture/vim-jinja'
     Plug 'ap/vim-css-color'
 call plug#end()
@@ -69,10 +64,6 @@ nnoremap <F3> :nohlsearch<CR>
 nnoremap <F8> :make<CR>
 " Close quickfix window
 nnoremap <F9> :cclose<CR>
-
-" Telescope
-nmap <Leader>f <cmd>Telescope find_files<cr>
-nmap ; <cmd>Telescope buffers<cr>
 
 function! Evince_ForvardSearch()
    let l:pycmd = expand('~/.vim/plugged/sved/ftplugin/evinceSync.py')
@@ -150,10 +141,13 @@ let g:airline#extensions#whitespace#enabled = 0
 let g:airline#parts#ffenc#skip_expected_string='utf-8[unix]'
 let g:airline#extensions#wordcount#enabled = 0
 let g:airline#extensions#branch#enabled = 0
+let g:airline_powerline_fonts = 0
+let g:airline_skip_empty_sections = 1
 if !exists('g:airline_symbols')
     let g:airline_symbols = {}
 endif
 let g:airline_symbols.spell = '✓'
+let g:airline_symbols.colnr = ' :'
 let g:airline_symbols.maxlinenr = ''
-" let g:airline_symbols.branch = '⎇'
+let g:airline_symbols.branch = '⎇'
 set noshowmode                  " No need for default mode indicator
