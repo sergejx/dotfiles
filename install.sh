@@ -67,6 +67,7 @@ handle_file_ln "/home/sergej/.dotfiles/bash_profile" "/home/sergej/.bash_profile
 handle_file_ln "/home/sergej/.dotfiles/bashrc" "/home/sergej/.bashrc"
 handle_file_ln "/home/sergej/.dotfiles/config/nvim/init.vim" "/home/sergej/.config/nvim/init.vim"
 handle_file_ln "/home/sergej/.dotfiles/gitconfig" "/home/sergej/.gitconfig"
+handle_file_ln "/home/sergej/.dotfiles/git-prompt.sh" "/home/sergej/.git-prompt.sh"
 handle_file_ln "/home/sergej/.dotfiles/inputrc" "/home/sergej/.inputrc"
 handle_file_ln "/home/sergej/.dotfiles/rcrc" "/home/sergej/.rcrc"
 handle_file_ln "/home/sergej/.dotfiles/vim/after/syntax/xml.vim" "/home/sergej/.vim/after/syntax/xml.vim"

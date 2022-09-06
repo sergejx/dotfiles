@@ -28,14 +28,14 @@ UNDERLINE="$(tput sgr 0 1)"
 INVERT="$(tput sgr 1 0)"
 NOCOLOR="$(tput sgr0)"
 
-source /usr/share/git-core/contrib/completion/git-prompt.sh
+source $HOME/.git-prompt.sh
 GIT_PS1_SHOWDIRTYSTATE=1
 GIT_PS1_SHOWUPSTREAM="auto"
 
 # User color
 case $(id -u) in
 	0) PS_user_color="$RED" ;;  # root
-	*) PS_user_color="$GREEN" ;;
+	*) PS_user_color="$GRAY" ;;
 esac
 
 # Local or SSH session?
@@ -44,11 +44,11 @@ PS_remote=
 
 # Only show username if not default
 PS_user=
-[ "$USER" != "sergej" ] && PS_user="\[$PS_user_color\]$USER\[$NOCOLOR\]"
+[ "$USER" != "sergej" ] || [ -n "$PS_remote" ] && PS_user="\[$PS_user_color\]$USER\[$NOCOLOR\]"
 
 # Show hostname inside SSH session
 PS_host=
-[ -n "$remote" ] && PS_host="@\[$YELLOW\]$HOSTNAME\[$NOCOLOR\]"
+[ -n "$remote" ] && PS_host="\[$GRAY\]@$HOSTNAME\[$NOCOLOR\]"
 
 # Show delimiter if user or host visible
 PS_delimiter=
