@@ -48,11 +48,11 @@ PS_user=
 
 # Show hostname inside SSH session
 PS_host=
-[ -n "$remote" ] && PS_host="\[$GRAY\]@$HOSTNAME\[$NOCOLOR\]"
+[ -n "$PS_remote" ] && PS_host="\[$GRAY\]@$HOSTNAME\[$NOCOLOR\]"
 
 # Show delimiter if user or host visible
 PS_delimiter=
-[ -n "$user_prompt" ] || [ -n "$host_prompt" ] && PS_delimiter=" "
+[ -n "$PS_user" ] || [ -n "$PS_host" ] && PS_delimiter=" "
 
 PS_status="\$(if [[ \$? = 0 ]]; then echo \"\[$CYAN\]❯\"; else echo \"\[$RED\]❯\"; fi)"
 PS_dir='\[$BLUE\]\w\[$GRAY\]$(__git_ps1 " %s")'
