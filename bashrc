@@ -55,8 +55,8 @@ PS_delimiter=
 [ -n "$user_prompt" ] || [ -n "$host_prompt" ] && PS_delimiter=" "
 
 PS_status="\$(if [[ \$? = 0 ]]; then echo \"\[$CYAN\]❯\"; else echo \"\[$RED\]❯\"; fi)"
-PS_dir='\[$BLUE\]\w \[$GRAY\]$(__git_ps1 "%s")'
-PS1="\n$PS_dir\n$PS_user$PS_host$PS_delimiter$PS_status\[$NOCOLOR\] "
+PS_dir='\[$BLUE\]\w\[$GRAY\]$(__git_ps1 " %s")'
+PS1="$PS_user$PS_host$PS_delimiter$PS_dir $PS_status\[$NOCOLOR\] "
 
 # Bash options ######################################################
 
