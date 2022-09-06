@@ -44,11 +44,11 @@ PS_remote=
 
 # Only show username if not default
 PS_user=
-[ "$USER" != "sergej" ] || [ -n "$PS_remote" ] && PS_user="\[$PS_user_color\]$USER\[$NOCOLOR\]"
+[ "$USER" != "sergej" ] || [ -n "$PS_remote" ] && PS_user="\[$PS_user_color\]\u\[$NOCOLOR\]"
 
 # Show hostname inside SSH session
 PS_host=
-[ -n "$PS_remote" ] && PS_host="\[$GRAY\]@$HOSTNAME\[$NOCOLOR\]"
+[ -n "$PS_remote" ] && PS_host="\[$GRAY\]@\h\[$NOCOLOR\]"
 
 # Show delimiter if user or host visible
 PS_delimiter=
