@@ -13,7 +13,9 @@ call plug#begin()
     Plug 'airblade/vim-gitgutter'
     " Look & feel
     Plug 'cormacrelf/vim-colors-github'
+    Plug 'nanotech/jellybeans.vim'
     Plug 'vim-airline/vim-airline'
+    Plug 'vim-airline/vim-airline-themes'
     " File types
     Plug 'plasticboy/vim-markdown'
     Plug 'lervag/vimtex', {'for': 'tex'}
@@ -128,10 +130,10 @@ set visualbell                  " Don't beep
 if (has("termguicolors"))
     set termguicolors
 endif
-set background=light            " Light theme
-let g:github_colors_block_diffmark=1
-colorscheme github
-highlight link mkdBlockquote Special
+set background=dark            " Dark theme
+" let g:github_colors_block_diffmark=1
+colorscheme jellybeans
+" highlight link mkdBlockquote Special
 set cursorline
 " Netrw
 let g:netrw_liststyle=3
