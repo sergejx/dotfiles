@@ -3,6 +3,7 @@ if [ -d ~/.local/bin ]; then
 fi
 
 export EDITOR=vim
-export BROWSER=firefox
-export TERMINAL=gnome-terminal
+export BROWSER=chromium-freeworld
+export TERMINAL=kgx
 export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
+export ON_COLOR=blue
