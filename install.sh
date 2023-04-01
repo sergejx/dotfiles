@@ -76,5 +76,5 @@ handle_file_ln "/home/sergej/.dotfiles/vim/colors/wombat.vim" "/home/sergej/.vim
 handle_file_ln "/home/sergej/.dotfiles/vim/indent/html.vim" "/home/sergej/.vim/indent/html.vim"
 handle_file_ln "/home/sergej/.dotfiles/vimrc" "/home/sergej/.vimrc"
 handle_file_ln "/home/sergej/.dotfiles/zimrc" "/home/sergej/.zimrc"
-handle_file_ln "/home/sergej/.dotfiles/zprofile" "/home/sergej/.zprofile"
+handle_file_ln "/home/sergej/.dotfiles/zshenv" "/home/sergej/.zshenv"
 handle_file_ln "/home/sergej/.dotfiles/zshrc" "/home/sergej/.zshrc"

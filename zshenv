@@ -10,4 +10,3 @@ export EDITOR=vim
 export BROWSER=firefox
 export TERMINAL=kgx
 export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
-export ON_COLOR=blue
