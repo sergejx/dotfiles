@@ -1,8 +1,0 @@
-partial alphanumeric_keys
-xkb_symbols "improved" {
-    name[Group1] = "Slovak (improved)";
-    include "sk(qwerty)"
-
-    // Exchange apostrophe and section mark
-    key <AC11>  { [ apostrophe,     exclam,     section,       ssharp ] };
-};

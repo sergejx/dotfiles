@@ -1,5 +1,0 @@
-! option = symbols
-  custom:typo = +custom(typo)
-
-// Include the system 'evdev' file
-! include %S/evdev

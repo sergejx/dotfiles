@@ -10,8 +10,8 @@
 // Mainly based on the layout proposed by Ilya Birman
 // http://ilyabirman.ru/projects/typography-layout/
 
-partial
-xkb_symbols "typo" {
+default  partial
+xkb_symbols "base" {
 
     // 1st keyboard row
     key <AE01> { [ NoSymbol, NoSymbol,        NoSymbol,       plusminus ] }; // "1"
@@ -39,6 +39,9 @@ xkb_symbols "typo" {
     key <AC07> { [ NoSymbol, NoSymbol,       downarrow,        NoSymbol ] }; // "j"
     key <AC08> { [ NoSymbol, NoSymbol,         uparrow,        NoSymbol ] }; // "k"
     key <AC09> { [ NoSymbol, NoSymbol,      rightarrow,        NoSymbol ] }; // "l"
+
+    // Replace Paragraph in Slovak layout with apostrophe
+    key <AC11> { [ apostrophe, NoSymbol,     section,       ssharp ] };
 
     // 4th keyboard row
     key <AB02> { [ NoSymbol, NoSymbol,        multiply,           U22C5 ] }; // "x", dot operator
