@@ -1,0 +1,11 @@
+partial alphanumeric_keys
+xkb_symbols "yazherty" {
+    name[Group1]= "Russian (yazherty)";
+
+    include "ru(phonetic)"
+
+    key <AB01> { [       Cyrillic_ze,       Cyrillic_ZE  ] };
+    key <LatW> { [      Cyrillic_zhe,      Cyrillic_ZHE  ] };
+    key <LatV> { [       Cyrillic_ve,       Cyrillic_VE  ] };
+    key <AD06> { [     Cyrillic_yeru,     Cyrillic_YERU  ] };
+};
