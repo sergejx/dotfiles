@@ -10,3 +10,4 @@ export EDITOR=vim
 export BROWSER=firefox
 export TERMINAL=kgx
 export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
+export GEM_HOME=$HOME/.local/gems
