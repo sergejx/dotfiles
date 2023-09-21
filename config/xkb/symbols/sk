@@ -1,0 +1,20 @@
+partial alphanumeric_keys
+xkb_symbols "sergejx" {
+    name[Group1]= "Slovak (sergejx)";
+
+    include "us(basic)"
+
+    key <AE01> {[ dead_caron,   exclam,       1    ]};
+    key <AE02> {[ lcaron,       at,           2    ]};
+    key <AE03> {[ scaron,       numbersign,   3    ]};
+    key <AE04> {[ scaron,       dollar,       4    ]};
+    key <AE05> {[ tcaron,       percent,      5    ]};
+    key <AE06> {[ zcaron,       asciicircum,  6,            dead_circumflex    ]};
+    key <AE07> {[ yacute,       ampersand,    7    ]};
+    key <AE08> {[ aacute,       asterisk,     8    ]};
+    key <AE09> {[ iacute,       parenleft,    9    ]};
+    key <AE10> {[ eacute,       parenright,   0    ]};
+    key <AC10> {[ semicolon,    colon,        dead_diaeresis ]};
+
+    key <AC11> {[ dead_acute,   quotedbl,     apostrophe ]};
+};

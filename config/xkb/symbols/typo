@@ -41,16 +41,16 @@ xkb_symbols "base" {
     key <AC09> { [ NoSymbol, NoSymbol,      rightarrow,        NoSymbol ] }; // "l"
 
     // Replace Paragraph in Slovak layout with apostrophe
-    key <AC11> { [ apostrophe, NoSymbol,     section,       ssharp ] };
+    //key <AC11> { [ NoSymbol, NoSymbol,     section,       ssharp ] };
 
     // 4th keyboard row
     key <AB02> { [ NoSymbol, NoSymbol,        multiply,           U22C5 ] }; // "x", dot operator
     key <AB03> { [ NoSymbol, NoSymbol,       copyright,            cent ] }; // "c"
     key <AB06> { [ NoSymbol, NoSymbol,      numerosign,        NoSymbol ] }; // "n"
     key <AB07> { [ NoSymbol, NoSymbol,           U2212,  periodcentered ] }; // "m", minus, middle dot
-    key <AB08> { [ NoSymbol, NoSymbol,        NoSymbol,   guillemotleft ] }; // ","
+    key <AB08> { [ NoSymbol, NoSymbol,        doublelowquotemark,   guillemotleft ] }; // ","
+    key <AB09> { [ NoSymbol, NoSymbol,        leftdoublequotemark,  guillemotright ] }; // "."
     key <AB10> { [ NoSymbol, NoSymbol,        ellipsis,        NoSymbol ] }; // "/"
-    key <AB09> { [ NoSymbol, NoSymbol,        NoSymbol,  guillemotright ] }; // "."
 
     // 5th keyboard row
     key <SPCE> { [    space,      space,         space,      nobreakspace ] }; // " "
