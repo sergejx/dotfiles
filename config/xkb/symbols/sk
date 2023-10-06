@@ -5,18 +5,18 @@ xkb_symbols "sergejx" {
     include "us(basic)"
 
     key <TLDE>  { [     grave, asciitilde,   dead_tilde,dead_abovering ] };
-    key <AE01>  { [      plus,          1,       exclam,     NoSymbol ] };
-    key <AE02>  { [    lcaron,          2,           at,     Nosymbol ] };
-    key <AE03>  { [    scaron,          3,   numbersign,     NoSymbol ] };
-    key <AE04>  { [    ccaron,          4,       dollar,     NoSymbol ] };
-    key <AE05>  { [    tcaron,          5,      percent,     NoSymbol ] };
-    key <AE06>  { [    zcaron,          6,  asciicircum,     NoSymbol ] };
-    key <AE07>  { [    yacute,          7,    ampersand,     NoSymbol ] };
-    key <AE08>  { [    aacute,          8,     asterisk,     NoSymbol ] };
-    key <AE09>  { [    iacute,          9,    parenleft,     NoSymbol ] };
-    key <AE10>  { [    eacute,          0,   parenright,     NoSymbol ] };
+    key <AE01>  { [      plus,     exclam,            1,     NoSymbol ] };
+    key <AE02>  { [    lcaron,         at,            2,     Nosymbol ] };
+    key <AE03>  { [    scaron, numbersign,            3,     NoSymbol ] };
+    key <AE04>  { [    ccaron,     dollar,            4,     NoSymbol ] };
+    key <AE05>  { [    tcaron,    percent,            5,     NoSymbol ] };
+    key <AE06>  { [    zcaron,asciicircum,            6,     NoSymbol ] };
+    key <AE07>  { [    yacute,  ampersand,            7,     NoSymbol ] };
+    key <AE08>  { [    aacute,   asterisk,            8,     NoSymbol ] };
+    key <AE09>  { [    iacute,  parenleft,            9,     NoSymbol ] };
+    key <AE10>  { [    eacute, parenright,            0,     NoSymbol ] };
     key <AE11>  { [     equal,      minus,   underscore,     NoSymbol ] };
-    key <AE12>  { [dead_acute, dead_caron,     NoSymbol,     NoSymbol ] };
+    key <AE12>  { [dead_acute, dead_caron,       endash,       emdash ] };
 
     key <AD01>  { [         q,          Q,    backslash,     NoSymbol ] };
     key <AD02>  { [         w,          W,          bar,     Nosymbol ] };
@@ -54,9 +54,9 @@ xkb_symbols "sergejx" {
     key <AB05>  { [         b,          B,    braceleft,     NoSymbol ] };
     key <AB06>  { [         n,          N,   braceright,     NoSymbol ] };
     key <AB07>  { [         m,          M,  asciicircum,     NoSymbol ] };
-    key <AB08>  { [     comma,       less, doublelowquotemark, guillemotleft ] };
-    key <AB09>  { [    period,    greater,leftdoublequotemark,guillemotright ] };
-    key <AB10>  { [     slash,   question,       endash,       emdash ] };
+    key <AB08>  { [     comma,       less,   doublelowquotemark,  guillemotleft ] };
+    key <AB09>  { [    period,    greater,  leftdoublequotemark, guillemotright ] };
+    key <AB10>  { [     slash,   question, rightdoublequotemark,       NoSymbol ] };
 
     key <SPCE>  { [     space,      space,        space, nobreakspace ] };
 
