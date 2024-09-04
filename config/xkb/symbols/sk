@@ -2,63 +2,17 @@ partial alphanumeric_keys
 xkb_symbols "sergejx" {
     name[Group1]= "Slovak (sergejx)";
 
-    include "us(basic)"
+    include "sk(qwerty)"
 
-    key <TLDE>  { [     grave, asciitilde,   dead_tilde,dead_abovering ] };
-    key <AE01>  { [      plus,     exclam,            1,     NoSymbol ] };
-    key <AE02>  { [    lcaron,         at,            2,     Nosymbol ] };
-    key <AE03>  { [    scaron, numbersign,            3,     NoSymbol ] };
-    key <AE04>  { [    ccaron,     dollar,            4,     NoSymbol ] };
-    key <AE05>  { [    tcaron,    percent,            5,     NoSymbol ] };
-    key <AE06>  { [    zcaron,asciicircum,            6,     NoSymbol ] };
-    key <AE07>  { [    yacute,  ampersand,            7,     NoSymbol ] };
-    key <AE08>  { [    aacute,   asterisk,            8,     NoSymbol ] };
-    key <AE09>  { [    iacute,  parenleft,            9,     NoSymbol ] };
-    key <AE10>  { [    eacute, parenright,            0,     NoSymbol ] };
-    key <AE11>  { [     equal,      minus,   underscore,     NoSymbol ] };
-    key <AE12>  { [dead_acute, dead_caron,       endash,       emdash ] };
+    key <AE11>  { [     equal,    percent,               endash,               emdash ] };
 
-    key <AD01>  { [         q,          Q,    backslash,     NoSymbol ] };
-    key <AD02>  { [         w,          W,          bar,     Nosymbol ] };
-    key <AD03>  { [         e,          E,     EuroSign,     NoSymbol ] };
-    key <AD04>  { [         r,          R,     NoSymbol,     NoSymbol ] };
-    key <AD05>  { [         t,          T,     NoSymbol,     NoSymbol ] };
-    key <AD06>  { [         y,          Y,     NoSymbol,     NoSymbol ] };
-    key <AD07>  { [         u,          U,     NoSymbol,     NoSymbol ] };
-    key <AD08>  { [         i,          I,     NoSymbol,     NoSymbol ] };
-    key <AD09>  { [         o,          O,     NoSymbol,     NoSymbol ] };
-    key <AD10>  { [         p,          P,     NoSymbol,     NoSymbol ] };
+    key <AD10>  { [         p,          P,   doublelowquotemark,   singlelowquotemark ] };
+    key <AD11>  { [    uacute,      slash,  leftdoublequotemark,  leftsinglequotemark ] };
+    key <AD12>  { [adiaeresis,  parenleft, rightdoublequotemark, rightsinglequotemark ] };
 
-    key <AD11>  { [    uacute,  braceleft,  bracketleft,     division ] };
-    key <AD12>  { [adiaeresis, braceright, bracketright,     multiply ] };
+    key <AC11>  { [apostrophe,     exclam,              section,              ssharp ] };
 
-    key <AC01>  { [         a,          A,   asciitilde,     NoSymbol ] };
-    key <AC02>  { [         s,          S,      dstroke,     NoSymbol ] };
-    key <AC03>  { [         d,          D,      Dstroke,     NoSymbol ] };
-    key <AC04>  { [         f,          F,  bracketleft,     NoSymbol ] };
-    key <AC05>  { [         g,          G, bracketright,     NoSymbol ] };
-    key <AC06>  { [         h,          H,        grave,     NoSymbol ] };
-    key <AC07>  { [         j,          J,   apostrophe,     NoSymbol ] };
-    key <AC08>  { [         k,          K,      lstroke,     NoSymbol ] };
-    key <AC09>  { [         l,          L,      Lstroke,     NoSymbol ] };
-
-    key <AC10>  { [ semicolon,      colon,  ocircumflex,   NoSymbol ] };
-    key <AC11>  { [apostrophe,   quotedbl,      section,   NoSymbol ] };
-    key <BKSL>  { [    ncaron,  backslash,          bar,   NoSymbol ] };
-
-    key <LSGT>  { [ backslash,        bar,        slash,     NoSymbol ] };
-    key <AB01>  { [         z,          Z,       degree,     NoSymbol ] };
-    key <AB02>  { [         x,          X,   numbersign,     Nosymbol ] };
-    key <AB03>  { [         c,          C,    ampersand,     NoSymbol ] };
-    key <AB04>  { [         v,          V,           at,     NoSymbol ] };
-    key <AB05>  { [         b,          B,    braceleft,     NoSymbol ] };
-    key <AB06>  { [         n,          N,   braceright,     NoSymbol ] };
-    key <AB07>  { [         m,          M,  asciicircum,     NoSymbol ] };
-    key <AB08>  { [     comma,       less,   doublelowquotemark,  guillemotleft ] };
-    key <AB09>  { [    period,    greater,  leftdoublequotemark, guillemotright ] };
-    key <AB10>  { [     slash,   question, rightdoublequotemark,       NoSymbol ] };
-
-    key <SPCE>  { [     space,      space,        space, nobreakspace ] };
+    key <SPCE>  { [     space,      space,                space,        nobreakspace ] };
 
     include "level3(ralt_switch)"
 };

@@ -4,6 +4,7 @@ xkb_symbols "yazherty" {
 
     include "ru(phonetic)"
 
+    key <AE11>	{[             minus,        underscore,            emdash,               endash]};
     key <AB01> { [       Cyrillic_ze,       Cyrillic_ZE  ] };
     key <LatW> { [      Cyrillic_zhe,      Cyrillic_ZHE  ] };
     key <LatV> { [       Cyrillic_ve,       Cyrillic_VE  ] };
