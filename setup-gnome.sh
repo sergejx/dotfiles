@@ -41,3 +41,11 @@ gsettings set org.gnome.desktop.wm.keybindings switch-windows "['<Alt>Tab']"
 
 # Keyboard layouts
 gsettings set org.gnome.desktop.input-sources sources "[('xkb', 'sk+prog'), ('xkb', 'ru+yazherty')]"
+
+# Download and set wallpaper
+WALLPAPER_PATH=$HOME/Pictures/papers.co-nw48-luca-bravo-mountain-sunset-nature.jpg
+if [ ! -f $WALLPAPER_PATH ]; then
+    wget -O $WALLPAPER_PATH https://papers.co/wallpaper/papers.co-nw48-luca-bravo-mountain-sunset-nature-36-3840x2400-4k-wallpaper.jpg
+fi
+
+gsettings set org.gnome.desktop.background picture-uri file://$WALLPAPER_PATH
