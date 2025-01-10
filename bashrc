@@ -5,6 +5,15 @@ if [ -f /etc/bashrc ]; then
   . /etc/bashrc
 fi
 
+# History control
+shopt -s histappend
+HISTCONTROL=ignoreboth
+HISTSIZE=32768
+HISTFILESIZE="${HISTSIZE}"
+
+# Autocompletion
+source /usr/share/bash-completion/bash_completion
+
 # User specific environment
 if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]; then
   PATH="$HOME/.local/bin:$HOME/bin:$PATH"
@@ -30,11 +39,12 @@ alias ...='cd ../..'
 alias ....='cd ../../..'
 
 # Tools
-alias n='nvim'
+alias o='xdg-open'
+alias v='nvim'
+alias vim='nvim'
 alias g='git'
 alias d='docker'
 alias lzg='lazygit'
-
 
 # DNF aliases (based on Prezto module)
 alias dnfc='sudo dnf clean all' # Cleans the cache.
@@ -59,5 +69,5 @@ force_color_prompt=yes
 color_prompt=yes
 
 # Simple prompt with path in the window/pane title and carat for typing line
-PS1=$'\w \uf0a9 '
+PS1=$'\W \uf0a9 '
 PS1="\[\e]0;\w\a\]$PS1"

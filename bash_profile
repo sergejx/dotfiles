@@ -8,9 +8,8 @@ fi
 # User specific environment and startup programs
 
 export EDITOR=nvim
-export BROWSER=brave-browser
-export TERMINAL=blackbox-terminal
-export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
+export BROWSER=google-chrome
+export TERMINAL=ghostty
 export GEM_HOME=$HOME/.local/gems
 export JAVA_HOMR=/usr/lib/jvm/java-21
 
