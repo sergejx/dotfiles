@@ -26,6 +26,12 @@
             <description>Slovak (sergejx)</description>
           </configItem>
         </variant>
+        <variant>
+          <configItem>
+            <name>prog</name>
+            <description>Slovak (programming)</description>
+          </configItem>
+        </variant>
       </variantList>
     </layout>
   </layoutList>
