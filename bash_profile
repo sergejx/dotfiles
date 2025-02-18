@@ -11,5 +11,5 @@ export EDITOR=nvim
 export BROWSER=google-chrome
 export TERMINAL=ghostty
 export GEM_HOME=$HOME/.local/gems
-export JAVA_HOMR=/usr/lib/jvm/java-21
+export JAVA_HOME=/usr/lib/jvm/java-21
 
