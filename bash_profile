@@ -8,7 +8,7 @@ fi
 # User specific environment and startup programs
 
 export EDITOR=nvim
-export BROWSER=google-chrome
+export BROWSER=brave-browser
 export TERMINAL=ghostty
 export GEM_HOME=$HOME/.local/gems
 export JAVA_HOME=/usr/lib/jvm/java-21
