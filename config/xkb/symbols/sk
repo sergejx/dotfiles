@@ -74,7 +74,7 @@ xkb_symbols "prog" {
     key <AB09>	{ [    period,    greater,        U2265,        U00f7 ]	};
     key <AB10>	{ [     slash,   question,        U2260,        U00b1 ] };
 
-    key <SPCE>  { [     space,      space, nobreakspace, nobreakspace ] };
+    key <SPCE>  { [     space,      space,        space, nobreakspace ] };
 
     include "level3(ralt_switch)"
 };
