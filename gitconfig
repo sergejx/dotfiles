@@ -9,8 +9,7 @@
 	tool = meld
 [pull]
 	ff = only
-[init]
-	defaultBranch = master
-
 [core]
 	autocrlf = input
+[init]
+	defaultBranch = main
