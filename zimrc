@@ -25,9 +25,6 @@ zmodule git-info
 zmodule prompt-pwd
 zmodule minimal
 
-# Show additional useful info on Enter
-zmodule magic-enter
-
 #
 # Completion
 #

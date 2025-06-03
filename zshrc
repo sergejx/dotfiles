@@ -84,6 +84,8 @@ ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
 #typeset -A ZSH_HIGHLIGHT_STYLES
 #ZSH_HIGHLIGHT_STYLES[comment]='fg=242'
 
+MNML_USER_CHAR='●'
+
 # ------------------
 # Initialize modules
 # ------------------
@@ -132,27 +134,18 @@ autoload -U zmv
 # Aliases and functions
 # ---------------------
 
-function outofterm () {
-    $@ >/dev/null 2>&1 &!
-}
-
 # Useful aliases
-alias open='xdg-open'
+alias o='xdg-open'
+alias d='docker'
+alias g='git'
+alias vim='nvim'
 
-# GUI tools
-alias ge='outofterm gedit'
-alias nau='outofterm nautilus .'
-
-# Docker
-alias dkc='docker compose'
+alias ls='eza --icons=auto'
+alias lt='eza --tree --level=2 --long --icons=auto --git'
+alias lta='lt -a'
 
 # Local server for static pages
 alias servethis='python3 -m http.server 8000'
-
-# Yandex Disk
-alias yds='yandex-disk status'
-alias ydstart='yandex-disk start'
-alias ydp='yandex-disk publish'
 
 # DNF aliases (based on Prezto module)
 alias dnfc='sudo dnf clean all'    # Cleans the cache.

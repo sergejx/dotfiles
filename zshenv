@@ -6,8 +6,7 @@ if [ -d $HOME/.local/share/JetBrains/Toolbox/scripts ]; then
 fi
 
 
-export EDITOR=vim
-export BROWSER=firefox
-export TERMINAL=kgx
-export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
+export EDITOR=nvim
+export BROWSER=brave-browser
+export TERMINAL=ghostty
 export GEM_HOME=$HOME/.local/gems
