@@ -65,6 +65,7 @@ handle_file_ln() {
 }
 handle_file_ln "/home/sergej/.dotfiles/bash_profile" "/home/sergej/.bash_profile"
 handle_file_ln "/home/sergej/.dotfiles/bashrc" "/home/sergej/.bashrc"
+handle_file_ln "/home/sergej/.dotfiles/config/ghostty/config" "/home/sergej/.config/ghostty/config"
 handle_file_ln "/home/sergej/.dotfiles/config/nvim/init.lua" "/home/sergej/.config/nvim/init.lua"
 handle_file_ln "/home/sergej/.dotfiles/config/nvim/lazy-lock.json" "/home/sergej/.config/nvim/lazy-lock.json"
 handle_file_ln "/home/sergej/.dotfiles/config/nvim/lazyvim.json" "/home/sergej/.config/nvim/lazyvim.json"
@@ -81,6 +82,9 @@ handle_file_ln "/home/sergej/.dotfiles/config/xkb/rules/evdev.xml" "/home/sergej
 handle_file_ln "/home/sergej/.dotfiles/config/xkb/symbols/ru" "/home/sergej/.config/xkb/symbols/ru"
 handle_file_ln "/home/sergej/.dotfiles/config/xkb/symbols/sk" "/home/sergej/.config/xkb/symbols/sk"
 handle_file_ln "/home/sergej/.dotfiles/config/xkb/symbols/typo" "/home/sergej/.config/xkb/symbols/typo"
+handle_file_ln "/home/sergej/.dotfiles/config/zed/keymap.json" "/home/sergej/.config/zed/keymap.json"
+handle_file_ln "/home/sergej/.dotfiles/config/zed/settings.json" "/home/sergej/.config/zed/settings.json"
+handle_file_ln "/home/sergej/.dotfiles/config/zed/themes/Kanagawa.json" "/home/sergej/.config/zed/themes/Kanagawa.json"
 handle_file_ln "/home/sergej/.dotfiles/gitconfig" "/home/sergej/.gitconfig"
 handle_file_ln "/home/sergej/.dotfiles/git-prompt.sh" "/home/sergej/.git-prompt.sh"
 handle_file_ln "/home/sergej/.dotfiles/inputrc" "/home/sergej/.inputrc"
