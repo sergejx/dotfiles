@@ -10,18 +10,12 @@ call plug#begin()
     Plug 'tpope/vim-eunuch'
     Plug 'tpope/vim-vinegar'
     Plug 'tpope/vim-fugitive'
-    Plug 'airblade/vim-gitgutter'
     " Look & feel
-    Plug 'cormacrelf/vim-colors-github'
     Plug 'nanotech/jellybeans.vim'
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
     " File types
     Plug 'plasticboy/vim-markdown'
-    Plug 'lervag/vimtex', {'for': 'tex'}
-    Plug 'peder2tm/sved'
-    Plug 'lepture/vim-jinja'
-    Plug 'ap/vim-css-color'
 call plug#end()
 " ===========================================================================
 
@@ -44,8 +38,6 @@ set undodir^=$HOME/.cache/vim//
 set directory^=$HOME/.cache/vim//
 " Set terminal title
 set title
-" Always show gutter
-set signcolumn=yes
 " Leader key
 let mapleader = ","
 let maplocalleader = ","
@@ -67,21 +59,6 @@ nnoremap <F8> :make<CR>
 " Close quickfix window
 nnoremap <F9> :cclose<CR>
 
-function! Evince_ForvardSearch()
-   let l:pycmd = expand('~/.vim/plugged/sved/ftplugin/evinceSync.py')
-   let l:cursorpos = getcurpos()
-   let l:command = shellescape(l:pycmd) . " " . shellescape(b:vimtex.out()) . " " .
-               \ l:cursorpos[1] . " " . l:cursorpos[2] . " " . shellescape(expand("%:p"))
-   let l:output = system(l:command)
-   echo l:output
-endfunction
-
-nnoremap <leader>lf :call Evince_ForvardSearch()<CR>
-
-" Ag
-if executable('ag')
-  let g:ackprg = 'ag --vimgrep'
-endif
 
 " Slovak and russian keyboard support
 " set langmap=ľščťžýáíé;234567890,úä;[],юЮ;`~,ёЁъЪ;#$%^,чЧ;=+,яжертыуиопшщ;qwertyuiop[],асдфгхйкл;asdfghjkl,зьцвбнм;zxcvbnm
@@ -90,13 +67,6 @@ map ú [
 map ä ]
 map ш [
 map щ ]
-
-" Bullets.vim
-let g:bullets_enabled_file_types = [
-    \ 'markdown',
-    \ 'text',
-    \ 'gitcommit'
-    \]
 
 " Filetypes =================================================================
 " Markdown
@@ -131,7 +101,6 @@ if (has("termguicolors"))
     set termguicolors
 endif
 set background=dark            " Dark theme
-" let g:github_colors_block_diffmark=1
 colorscheme jellybeans
 " highlight link mkdBlockquote Special
 set cursorline
