@@ -8,4 +8,5 @@ vim.opt.spelllang = {"sk","en"}
 vim.opt.wrap = true
 vim.opt.breakindent = true
 vim.opt.clipboard = "" -- Don't sync with system clipboard
+vim.opt.cursorlineopt="number"
 

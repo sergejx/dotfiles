@@ -1,7 +1,9 @@
-theme = catppuccin-macchiato
+theme = tokyonight
 window-theme = ghostty
-font-size = 10
-font-family = Fira Mono
+window-subtitle = working-directory
+font-family = Cascadia Mono
+font-size = 9
+adjust-cell-height = 2
 window-padding-x = 4
 window-padding-y = 4
 window-height = 44
