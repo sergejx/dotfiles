@@ -7,6 +7,6 @@ fi
 
 
 export EDITOR=nvim
-export BROWSER=google-chrome
+export BROWSER=brave-browser
 export TERMINAL=ghostty
 export GEM_HOME=$HOME/.local/gems
