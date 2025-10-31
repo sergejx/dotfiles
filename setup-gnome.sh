@@ -33,6 +33,16 @@ gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-7 "['<Shift><Su
 gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-8 "['<Shift><Super>8']"
 gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-9 "['<Shift><Super>9']"
 
+gsettings set org.gnome.desktop.wm.keybindings maximize "['<Super>Up']"
+gsettings set org.gnome.desktop.wm.keybindings maximize-vertically "['<Alt>F9']"
+
+org.gnome.settings-daemon.plugins.media-keys calculator ['<Shift><Super>equal']
+org.gnome.settings-daemon.plugins.media-keys email ['<Shift><Super>e']
+org.gnome.settings-daemon.plugins.media-keys home ['<Shift><Super>f']
+org.gnome.settings-daemon.plugins.media-keys help []
+org.gnome.settings-daemon.plugins.media-keys www ['<Shift><Super>b']
+
+
 # Fixed workspeces
 gsettings set org.gnome.desktop.wm.preferences num-workspaces 5
 
@@ -41,11 +51,3 @@ gsettings set org.gnome.desktop.wm.keybindings switch-windows "['<Alt>Tab']"
 
 # Keyboard layouts
 gsettings set org.gnome.desktop.input-sources sources "[('xkb', 'sk+prog'), ('xkb', 'ru+yazherty')]"
-
-# Download and set wallpaper
-WALLPAPER_PATH=$HOME/Pictures/papers.co-nw48-luca-bravo-mountain-sunset-nature.jpg
-if [ ! -f $WALLPAPER_PATH ]; then
-    wget -O $WALLPAPER_PATH https://papers.co/wallpaper/papers.co-nw48-luca-bravo-mountain-sunset-nature-36-3840x2400-4k-wallpaper.jpg
-fi
-
-gsettings set org.gnome.desktop.background picture-uri file://$WALLPAPER_PATH
