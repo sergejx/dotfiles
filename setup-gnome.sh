@@ -36,11 +36,11 @@ gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-9 "['<Shift><Su
 gsettings set org.gnome.desktop.wm.keybindings maximize "['<Super>Up']"
 gsettings set org.gnome.desktop.wm.keybindings maximize-vertically "['<Alt>F9']"
 
-org.gnome.settings-daemon.plugins.media-keys calculator ['<Shift><Super>equal']
-org.gnome.settings-daemon.plugins.media-keys email ['<Shift><Super>e']
-org.gnome.settings-daemon.plugins.media-keys home ['<Shift><Super>f']
-org.gnome.settings-daemon.plugins.media-keys help []
-org.gnome.settings-daemon.plugins.media-keys www ['<Shift><Super>b']
+gsettings set org.gnome.settings-daemon.plugins.media-keys calculator "['<Shift><Super>equal']"
+gsettings set org.gnome.settings-daemon.plugins.media-keys email "['<Shift><Super>e']"
+gsettings set org.gnome.settings-daemon.plugins.media-keys home "['<Shift><Super>f']"
+gsettings set org.gnome.settings-daemon.plugins.media-keys help []
+gsettings set org.gnome.settings-daemon.plugins.media-keys www "['<Shift><Super>b']"
 
 
 # Fixed workspeces
