@@ -1,11 +1,12 @@
-theme = tokyonight
+theme = TokyoNight
+# theme = TokyoNight Day
+# theme = catppuccin-macchiato
+# theme = catppuccin-latte
 window-theme = ghostty
 window-subtitle = working-directory
-font-family = Cascadia Mono
-font-size = 9
-adjust-cell-height = 2
-window-padding-x = 4
-window-padding-y = 4
+font-family = CaskaydiaMono Nerd Font
+font-size = 10
+# adjust-cell-height = 2
 window-height = 44
 window-width = 122
 
@@ -13,3 +14,6 @@ keybind = ctrl+shift+left=goto_split:left
 keybind = ctrl+shift+right=goto_split:right
 keybind = ctrl+shift+up=goto_split:up
 keybind = ctrl+shift+down=goto_split:down
+keybind = shift+enter=text:\x1b\r
+
+shell-integration-features=cursor,sudo,title,ssh-env
