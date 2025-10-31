@@ -10,3 +10,4 @@ export EDITOR=nvim
 export BROWSER=brave-browser
 export TERMINAL=ghostty
 export GEM_HOME=$HOME/.local/gems
+export ELECTRON_OZONE_PLATFORM_HINT=auto
