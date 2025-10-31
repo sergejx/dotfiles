@@ -16,28 +16,32 @@
     "enabled_in_text_threads": false
   },
   "features": {
-    "edit_prediction_provider": "zed"
+    "edit_prediction_provider": "copilot"
   },
   "show_edit_predictions": true,
   "restore_on_startup": "none",
   "agent": {
+    "play_sound_when_agent_done": true,
     "default_model": {
-      "provider": "zed.dev",
-      "model": "claude-sonnet-4-latest"
-    },
-    "version": "2"
+      "provider": "copilot_chat",
+      "model": "claude-sonnet-4"
+    }
   },
   "vim_mode": false,
-  "ui_font_size": 14,
+  "vim": {
+    "use_system_clipboard": "on_yank"
+  },
+  "ui_font_size": 15,
   "ui_font_family": "Adwaita Sans",
   "buffer_font_size": 13,
   "buffer_font_family": "FiraMono Nerd Font",
   "terminal": {
     "line_height": "standard"
   },
+  "current_line_highlight": "gutter",
   "theme": {
-    "mode": "dark",
-    "dark": "Catppuccin Macchiato",
+    "mode": "light",
+    "dark": "Tokyo Night",
     "light": "One Light"
   },
   "languages": {
