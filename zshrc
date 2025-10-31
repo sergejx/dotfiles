@@ -85,6 +85,7 @@ ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
 #ZSH_HIGHLIGHT_STYLES[comment]='fg=242'
 
 MNML_USER_CHAR='●'
+MNML_INSERT_CHAR='❯'
 
 # ------------------
 # Initialize modules
