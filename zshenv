@@ -7,7 +7,7 @@ fi
 
 
 export EDITOR=nvim
-export BROWSER=brave-browser
+export BROWSER=firefox
 export TERMINAL=ghostty
 export GEM_HOME=$HOME/.local/gems
-export ELECTRON_OZONE_PLATFORM_HINT=auto
+# export ELECTRON_OZONE_PLATFORM_HINT=auto

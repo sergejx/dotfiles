@@ -16,7 +16,7 @@
     "enabled_in_text_threads": false
   },
   "features": {
-    "edit_prediction_provider": "copilot"
+    "edit_prediction_provider": "zed"
   },
   "show_edit_predictions": true,
   "restore_on_startup": "none",
@@ -69,6 +69,13 @@
         "python.analysis": {
           "diagnosticMode": "workspace"
           // "typeCheckingMode": "off"
+        }
+      }
+    },
+    "ltex": {
+      "settings": {
+        "ltex": {
+          "language": "en-US"
         }
       }
     }
